@@ -10,11 +10,11 @@ export const resumeData = {
     website: "https://saurabh.araiyer.me",
     blog: "http://decapsulatingabstraction.blogspot.com",
     summary:
-      "Staff Software Engineer with 12+ years of experience architecting high-throughput distributed systems, mission-critical financial platforms, and cloud-native data backbones. Proven track record of scaling transactional e-commerce infrastructure to 500,000+ concurrent requests during peak flash sales (Flipkart Big Billion Days), engineering multi-vertical regulated FinTech identity platforms compliant with RBI/IRDAI/SEBI (Navi), and leading foundational event-driven ETL systems on GCP (Statisfy). Driven by first-principles systems design, high-availability data topologies, and operational resilience.",
+      "Staff Software Engineer with 13+ years of experience architecting high-throughput distributed systems, mission-critical financial platforms, and cloud-native data backbones. Proven track record of scaling transactional e-commerce infrastructure to 500,000+ concurrent requests during peak flash sales (Flipkart Big Billion Days), engineering multi-vertical regulated FinTech identity platforms compliant with RBI/IRDAI/SEBI (Navi), and leading foundational event-driven ETL systems on GCP (Statisfy). Driven by first-principles systems design, high-availability data topologies, and operational resilience.",
   },
 
   stats: [
-    { label: "Engineering Tenure", value: "12+ Years", sub: "Distributed Systems & Platforms" },
+    { label: "Engineering Tenure", value: "13+ Years", sub: "Distributed Systems & Platforms" },
     { label: "Peak Concurrency Scaled", value: "500k+ Req/s", sub: "Flipkart Big Billion Days" },
     { label: "Cross-Charter Architecture", value: "15+ Systems", sub: "Order Path & Platform Integration" },
     { label: "Tier-1 Platforms Built", value: "3 Ecosystems", sub: "Statisfy · Navi · Flipkart" },
@@ -191,7 +191,7 @@ export const resumeData = {
       id: "navi",
       company: "Navi Technologies",
       role: "Engineering Manager / Lead Software Engineer",
-      period: "Feb 2021 - Jan 2024",
+      period: "May 2022 - Jan 2024",
       location: "Bengaluru, Karnataka, India",
       companyType: "FinTech Unicorn · Lending · Mutual Funds · Insurance",
       summary:
@@ -266,7 +266,7 @@ export const resumeData = {
         {
           id: "navi-aggregation",
           name: "Multi-Tenant Request Aggregation Platform",
-          period: "Dec 2021 - Apr 2022",
+          period: "May 2022 - Dec 2022",
           tagline: "Horizontally scalable, isolated request batching and dispatch engine",
           description:
             "Engineered a high-throughput platform enabling asynchronous request aggregation, enrichment, and batch dispatch based on configurable parameters.",
@@ -285,7 +285,7 @@ export const resumeData = {
         {
           id: "navi-k8s-idgen",
           name: "Kubernetes Migration & Distributed Sequence Generator",
-          period: "Feb 2021 - Jun 2021",
+          period: "May 2022 - Aug 2022",
           tagline: "Containerization adoption and monotonically increasing distributed ID system",
           description:
             "Spearheaded enterprise-wide containerization onto Kubernetes and designed a distributed sequence generator for human-readable financial transaction IDs.",
@@ -307,11 +307,11 @@ export const resumeData = {
       id: "flipkart",
       company: "Flipkart",
       role: "Senior Software Engineer / Lead Engineer",
-      period: "May 2015 - Jan 2021",
+      period: "May 2015 - Apr 2022 (7 years)",
       location: "Bengaluru, Karnataka, India",
       companyType: "E-Commerce Market Leader · Pricing, Affordability & Order Path",
       summary:
-        "5.5+ years of driving core transactional architecture across Order Path, Pricing & Promotions, and Affordability charters. Hardened systems to sustain 500,000+ concurrent requests during peak Big Billion Days.",
+        "7 years of driving core transactional architecture across Order Path, Pricing & Promotions, and Affordability charters. Hardened systems to sustain 500,000+ concurrent requests during peak Big Billion Days.",
       accentColor: "blue",
       logoBadge: "FK",
       highlights: [

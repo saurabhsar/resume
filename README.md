@@ -17,7 +17,7 @@
 - **Print & PDF Optimized**: Tailored `@media print` stylesheets to cleanly print or save the resume as a crisp PDF directly from your browser.
 - **Peer-Reviewed Publications**: Research papers published with Springer Journal of Optics and IEEE.
 - **Marquee Awards Spotlight**: Flipkart CEO Excellence Award, HiFi Awards, Instant Karma, and Samsung Spot Award.
-- **Technical Philosophy & Articles**: Real-world reflections on *Loop Engineering*, *ASD-STE100*, and *Kafka vs. Google Cloud Pub/Sub*.
+- **Technical Philosophy & Articles**: Real-world reflections on *Distributed Systems*, *Kafka vs. Google Cloud Pub/Sub*, and *First-Principles Architecture*.
 
 ---
 
