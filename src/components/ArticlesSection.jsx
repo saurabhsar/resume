@@ -30,7 +30,7 @@ export default function ArticlesSection({ darkMode }) {
             Articles & Technical Thoughts
           </h2>
           <p className={`mt-2 text-base ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-            Reflecting on real-world engineering experiences: Kafka vs Pub/Sub, loop engineering, and agentic precision.
+            Reflecting on real-world systems architecture, streaming tradeoffs, and platform resilience.
           </p>
         </div>
 
@@ -51,7 +51,7 @@ export default function ArticlesSection({ darkMode }) {
                 "Reason from first principle!"
               </h3>
               <p className={`text-sm leading-relaxed ${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>
-                Every architecture challenge—whether scaling distributed locks for 500k concurrent e-commerce flash sales, structuring regulatory KYC state machines, or preventing LLM hallucinations with ASD-STE100—begins with stripping assumptions down to fundamental axioms and reasoning upwards.
+                Every architecture challenge—whether scaling distributed locks for 500k concurrent e-commerce flash sales, structuring multi-vertical regulatory KYC state machines, or decoupling asynchronous event streams—begins with stripping assumptions down to fundamental axioms and reasoning upwards.
               </p>
             </div>
           </div>

@@ -16,12 +16,12 @@ export default function SkillsSection({ darkMode, onSelectSkillFilter }) {
   const [activeCategory, setActiveCategory] = useState('All');
 
   const categoryIcons = {
-    'Agentic AI & LLMs': Sparkles,
-    'Distributed Systems & Architecture': Server,
-    'Databases, Caches & Streaming': Database,
-    'Cloud, Infrastructure & DevOps': Cloud,
+    'Distributed Systems & Core Scale': Server,
+    'Data Stores, Caching & Streaming': Database,
+    'Platform Engineering & Compliance': Check,
+    'Cloud, Infrastructure & SRE': Cloud,
     'Languages & Frameworks': Code2,
-    'Leadership & Strategy': Users,
+    'Technical Leadership & System Design': Users,
   };
 
   const categories = ['All', ...resumeData.skillsCategories.map(c => c.category)];
@@ -51,7 +51,7 @@ export default function SkillsSection({ darkMode, onSelectSkillFilter }) {
             Core Competencies & Stack Matrix
           </h2>
           <p className={`mt-2 text-base ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-            Mastery across distributed systems, low-latency caches, deterministic AI loops, and cloud-native infrastructure.
+            Mastery across distributed systems, low-latency caches, transactional consistency, and cloud-native infrastructure.
           </p>
         </div>
 

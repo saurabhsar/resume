@@ -69,7 +69,7 @@ export default function Hero({ darkMode }) {
               <span>{resumeData.personal.title}</span>
               <span className="hidden sm:inline text-slate-500">•</span>
               <span className="text-sm sm:text-base font-normal font-mono px-2.5 py-1 rounded-md border text-cyan-400 bg-cyan-950/40 border-cyan-800/40">
-                Distributed Systems & Agentic AI
+                Distributed Systems & Platform Architecture
               </span>
             </h2>
 
@@ -83,11 +83,11 @@ export default function Hero({ darkMode }) {
               </div>
               <div className="flex items-center gap-1.5">
                 <Server className="w-4 h-4 text-indigo-400" />
-                <span>500k+ RPS High-Scale Systems</span>
+                <span>500k+ RPS Flash-Sale Scale</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                <span>Tier-1 FinTech & E-Commerce Lead</span>
+                <span>Tier-1 FinTech & E-Commerce Platforms</span>
               </div>
             </div>
 
@@ -179,7 +179,7 @@ export default function Hero({ darkMode }) {
                 <span className={`text-xs font-mono font-semibold uppercase tracking-wider ${
                   darkMode ? 'text-slate-400' : 'text-slate-500'
                 }`}>
-                  Core Competencies
+                  Architectural Pillars
                 </span>
                 <span className="text-xs px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-mono">
                   Production Proven
@@ -197,7 +197,7 @@ export default function Hero({ darkMode }) {
                       Ultra-Scale Distributed Systems
                     </h4>
                     <p className={`text-xs mt-0.5 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-                      500,000+ RPS, Aerospike, Cassandra, Redis, Java Dropwizard, JVM profiling.
+                      500,000+ RPS concurrency, Aerospike, Cassandra, Redis, Java Dropwizard, JVM profiling.
                     </p>
                   </div>
                 </div>
@@ -208,10 +208,10 @@ export default function Hero({ darkMode }) {
                   </div>
                   <div>
                     <h4 className={`text-sm font-semibold ${darkMode ? 'text-white' : 'text-slate-900'}`}>
-                      Agentic AI & Loop Engineering
+                      Data Backbones & Streaming
                     </h4>
                     <p className={`text-xs mt-0.5 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-                      Deterministic evaluation loops, ASD-STE100 precision prompting, natural language querying.
+                      Event-driven streaming with Google Cloud Pub/Sub, Kafka, PostgreSQL optimizations, and Terraform IaC.
                     </p>
                   </div>
                 </div>
@@ -225,7 +225,7 @@ export default function Hero({ darkMode }) {
                       Mission-Critical Compliance
                     </h4>
                     <p className={`text-xs mt-0.5 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-                      FinTech KYC complying with RBI/IRDAI/SEBI, plus SOX audit certification at Flipkart.
+                      Multi-vertical FinTech KYC complying with RBI/IRDAI/SEBI, plus SOX security certification.
                     </p>
                   </div>
                 </div>
@@ -236,10 +236,10 @@ export default function Hero({ darkMode }) {
                   </div>
                   <div>
                     <h4 className={`text-sm font-semibold ${darkMode ? 'text-white' : 'text-slate-900'}`}>
-                      Engineering Leadership
+                      Cross-Charter Technical Leadership
                     </h4>
                     <p className={`text-xs mt-0.5 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-                      Led teams of 6-7 engineers, unified contracts across 15+ cross-functional teams.
+                      End-to-end architecture across 15+ engineering systems, RFC closures, and high-concurrency order paths.
                     </p>
                   </div>
                 </div>

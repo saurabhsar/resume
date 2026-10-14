@@ -1,7 +1,7 @@
 export const resumeData = {
   personal: {
     name: "Saurabh Araiyer",
-    title: "Staff Software Engineer & Engineering Leader",
+    title: "Staff Software Engineer & Platform Architect",
     tagline: "Reason from first principle!",
     location: "Bengaluru, Karnataka, India",
     email: "saurabh.araiyer@gmail.com",
@@ -10,80 +10,80 @@ export const resumeData = {
     website: "https://saurabh.araiyer.me",
     blog: "http://decapsulatingabstraction.blogspot.com",
     summary:
-      "Accomplished Staff Software Engineer and Technical Leader with 12+ years of experience architecting large-scale distributed systems, multi-tenant cloud platforms, and enterprise AI agent workflows. Proven track record of scaling high-throughput e-commerce platforms to 500,000+ concurrent requests (Flipkart Big Billion Days), engineering mission-critical FinTech infrastructure compliant with RBI/IRDAI/SEBI (Navi), and leading foundational AI-agent ETL and reactive cloud architectures (Statisfy). Passionate about loop engineering, deterministic LLM evaluation, and first-principles software design.",
+      "Staff Software Engineer with 12+ years of experience architecting high-throughput distributed systems, mission-critical financial platforms, and cloud-native data backbones. Proven track record of scaling transactional e-commerce infrastructure to 500,000+ concurrent requests during peak flash sales (Flipkart Big Billion Days), engineering multi-vertical regulated FinTech identity platforms compliant with RBI/IRDAI/SEBI (Navi), and leading foundational event-driven ETL systems on GCP (Statisfy). Driven by first-principles systems design, high-availability data topologies, and operational resilience.",
   },
 
   stats: [
-    { label: "Experience", value: "12+ Years", sub: "Distributed Systems & Platforms" },
-    { label: "Peak Scale Handled", value: "500k+ Req/s", sub: "Flipkart Big Billion Days" },
-    { label: "Engineering Leadership", value: "Up to 7 Engineers", sub: "Managed & Mentored" },
-    { label: "Company Scale", value: "3 Tier-1 Platforms", sub: "Statisfy · Navi · Flipkart" },
-    { label: "Awards & Honors", value: "5 Prestigious Awards", sub: "Flipkart CEO Award, HiFi, Karma" },
-    { label: "Research Papers", value: "3 Publications", sub: "Springer & IEEE Optics" },
+    { label: "Engineering Tenure", value: "12+ Years", sub: "Distributed Systems & Platforms" },
+    { label: "Peak Concurrency Scaled", value: "500k+ Req/s", sub: "Flipkart Big Billion Days" },
+    { label: "Cross-Charter Architecture", value: "15+ Systems", sub: "Order Path & Platform Integration" },
+    { label: "Tier-1 Platforms Built", value: "3 Ecosystems", sub: "Statisfy · Navi · Flipkart" },
+    { label: "Marquee Engineering Awards", value: "5 Honors", sub: "Flipkart CEO Award, 2x HiFi, Karma" },
+    { label: "Peer-Reviewed Publications", value: "3 Papers", sub: "Springer & IEEE Optics" },
   ],
 
   skillsCategories: [
     {
-      category: "Agentic AI & LLMs",
-      description: "Loop engineering, evaluation frameworks, and deterministic agent orchestration",
+      category: "Distributed Systems & Core Scale",
+      description: "High-throughput, low-latency microservices, consistency models, and transaction topologies",
       skills: [
-        { name: "Loop Engineering", level: "Expert", tags: ["Autonomous Loops", "Retry Policies", "Guardrails"] },
-        { name: "ASD-STE100 Prompting", level: "Expert", tags: ["Controlled Language", "Precision Schemas"] },
-        { name: "Agent Evaluation & Benchmarking", level: "Advanced", tags: ["LLM Evals", "Output Verification"] },
-        { name: "Natural Language Querying", level: "Advanced", tags: ["Text-to-SQL", "RAG", "Embeddings"] },
+        { name: "Ultra-High Scale Architecture", level: "Expert", tags: ["500k+ RPS", "Sub-10ms P99", "Flash Sales"] },
+        { name: "Multi-Tier Consistency Models", level: "Expert", tags: ["Read-After-Write", "Distributed Caches", "Eventual Consistency"] },
+        { name: "Multi-Tenant Platform Design", level: "Expert", tags: ["Data Isolation", "Horizontal Scaling", "Partitioning"] },
+        { name: "Microservices & Event-Driven", level: "Expert", tags: ["Domain-Driven Design", "Asynchronous Messaging", "Decoupling"] },
+        { name: "High-Availability & Fault Tolerance", level: "Expert", tags: ["Circuit Breakers", "Graceful Degradation", "Failover"] },
       ],
     },
     {
-      category: "Distributed Systems & Architecture",
-      description: "High-scale, fault-tolerant, low-latency microservices and platforms",
+      category: "Data Stores, Caching & Streaming",
+      description: "In-memory stores, distributed key-value engines, and event streaming",
       skills: [
-        { name: "High-Throughput / Low-Latency", level: "Expert", tags: ["500k+ RPS", "Sub-10ms P99"] },
-        { name: "Multi-Tenant Architecture", level: "Expert", tags: ["Data Isolation", "Linear Scaling"] },
-        { name: "Read-After-Write Consistency", level: "Expert", tags: ["Multi-tier DB", "Caching Topologies"] },
-        { name: "Microservices & Event-Driven", level: "Expert", tags: ["Domain Driven", "Asynchronous"] },
-        { name: "Regulatory Compliance", level: "Advanced", tags: ["RBI", "SEBI", "IRDAI", "SOX"] },
+        { name: "Aerospike & Redis", level: "Expert", tags: ["In-Memory Caching", "Sub-Millisecond Reads", "Lua Scripts"] },
+        { name: "Apache Cassandra", level: "Advanced", tags: ["NoSQL", "Partition Keys", "Multi-DC Replication"] },
+        { name: "Google Cloud Pub/Sub", level: "Expert", tags: ["Event Streaming", "Dead-Letter Queues", "Async Processing"] },
+        { name: "Apache Kafka & Apache Storm", level: "Advanced", tags: ["Stream Processing", "Partition Ordering", "Consumer Groups"] },
+        { name: "PostgreSQL & MySQL", level: "Expert", tags: ["Index Optimization", "Connection Pooling", "Alembic Migrations"] },
       ],
     },
     {
-      category: "Databases, Caches & Streaming",
-      description: "Transactional databases, in-memory caches, and real-time event streaming",
+      category: "Platform Engineering & Compliance",
+      description: "Configurable business engines, regulatory identity platforms, and audit security",
       skills: [
-        { name: "Google Cloud Pub/Sub", level: "Expert", tags: ["Event Decoupling", "Streaming"] },
-        { name: "Apache Kafka & Apache Storm", level: "Advanced", tags: ["Stream Processing", "Topics"] },
-        { name: "Aerospike & Redis", level: "Expert", tags: ["In-Memory Caches", "Zero Latency"] },
-        { name: "Apache Cassandra", level: "Advanced", tags: ["NoSQL", "Partitioning"] },
-        { name: "PostgreSQL & MySQL", level: "Expert", tags: ["Query Optimization", "Alembic Migrations"] },
+        { name: "Regulatory KYC Infrastructure", level: "Expert", tags: ["RBI", "IRDAI", "SEBI Compliance", "Multi-Vertical"] },
+        { name: "Low-Code / Configurable Engines", level: "Expert", tags: ["State Machines", "Dynamic Funnels", "Zero-Code Changes"] },
+        { name: "SOX Audit Governance & Security", level: "Advanced", tags: ["Audit Logging", "Role-Based Access", "Secure Communication"] },
+        { name: "Enterprise SaaS Integrations", level: "Expert", tags: ["Canonical Data Models", "Rate Limiting", "Webhook Replay"] },
       ],
     },
     {
-      category: "Cloud, Infrastructure & DevOps",
-      description: "Cloud-native infrastructure as code, containerization, and observability",
+      category: "Cloud, Infrastructure & SRE",
+      description: "Infrastructure as Code, container orchestration, and incident observability",
       skills: [
-        { name: "Google Cloud Platform (GCP)", level: "Advanced", tags: ["Cloud Run", "Cloud SQL", "Pub/Sub"] },
-        { name: "Amazon Web Services (AWS)", level: "Advanced", tags: ["Athena", "S3", "RDS", "EC2"] },
-        { name: "Terraform (IaC)", level: "Advanced", tags: ["Declarative Infra", "State Management"] },
-        { name: "Kubernetes (K8s) & Docker", level: "Advanced", tags: ["Microservice Orchestration"] },
-        { name: "Observability & SRE", level: "Expert", tags: ["Prometheus", "Alertmanager", "OpenTSDB", "Grafana"] },
+        { name: "Google Cloud Platform (GCP)", level: "Advanced", tags: ["Cloud Run", "Cloud SQL", "Pub/Sub", "VPC & IAM"] },
+        { name: "Amazon Web Services (AWS)", level: "Advanced", tags: ["Athena", "S3", "RDS", "EKS", "EC2"] },
+        { name: "Terraform (IaC)", level: "Advanced", tags: ["Modular Infra", "Multi-Environment Parity", "State Locking"] },
+        { name: "Kubernetes & Containers", level: "Advanced", tags: ["Helm", "Pod Scaling", "Microservice Deployment"] },
+        { name: "Observability & SRE Automation", level: "Expert", tags: ["Prometheus", "Alertmanager", "OpenTSDB", "Grafana"] },
       ],
     },
     {
       category: "Languages & Frameworks",
-      description: "Core programming languages and engineering frameworks",
+      description: "Core systems programming, backend frameworks, and database query engineering",
       skills: [
-        { name: "Java", level: "Expert", tags: ["Spring Boot", "Dropwizard", "JPA/Hibernate", "JVM Tuning"] },
-        { name: "Python", level: "Expert", tags: ["FastAPI", "ETL", "AsyncIO", "Automation"] },
-        { name: "Go & Bash", level: "Proficient", tags: ["Tooling", "Systems"] },
-        { name: "SQL & Schema Design", level: "Expert", tags: ["Complex Queries", "Performance Tuning"] },
+        { name: "Java", level: "Expert", tags: ["Spring Boot", "Dropwizard", "JPA/Hibernate", "JFR / JVM Profiling"] },
+        { name: "Python", level: "Expert", tags: ["Data Pipelines", "AsyncIO", "FastAPI", "Automation"] },
+        { name: "SQL & Schema Architecture", level: "Expert", tags: ["Query Optimization", "Complex Joins", "Partition Pruning"] },
+        { name: "Go & Bash", level: "Proficient", tags: ["Systems Tooling", "CLI Automation", "Linux Internals"] },
       ],
     },
     {
-      category: "Leadership & Strategy",
-      description: "Team management, cross-functional stakeholder leadership, and hiring",
+      category: "Technical Leadership & System Design",
+      description: "Cross-functional alignment, technical roadmaps, and architectural governance",
       skills: [
-        { name: "Engineering Management", level: "Advanced", tags: ["Teams of 6-7", "OKRs", "Delivery"] },
-        { name: "Cross-Functional Alignment", level: "Expert", tags: ["15+ Partner Teams", "Contract Closure"] },
-        { name: "Systemic Mentorship", level: "Expert", tags: ["Code Reviews", "Design Critiques"] },
-        { name: "Operational Excellence", level: "Expert", tags: ["Runbooks", "Post-Mortems", "SLAs"] },
+        { name: "System Architecture & RFCs", level: "Expert", tags: ["End-to-End Design", "Contract Closure", "Failure Mode Analysis"] },
+        { name: "Cross-Functional Leadership", level: "Expert", tags: ["15+ Partner Charters", "Order Path Coordination", "Stakeholder Alignment"] },
+        { name: "Engineering Team Mentorship", level: "Expert", tags: ["Design Reviews", "Code Standards", "Talent Growth"] },
+        { name: "Operational Excellence", level: "Expert", tags: ["Post-Mortems", "Runbooks", "SLAs & SLOs"] },
       ],
     },
   ],
@@ -95,91 +95,91 @@ export const resumeData = {
       role: "Founding Engineer / Tech Lead",
       period: "Jan 2024 - Present",
       location: "Bengaluru, Karnataka, India",
-      companyType: "Enterprise AI Agents · Customer Intelligence",
+      companyType: "Enterprise AI & Data Intelligence Platform",
       summary:
-        "Architecting foundational data infrastructure, cloud-native GCP systems, and deterministic AI agent loops powering automated customer success intelligence.",
+        "Architecting core data platform foundations, cloud-native GCP infrastructure, and resilient event streaming pipelines powering automated enterprise customer intelligence.",
       accentColor: "indigo",
       logoBadge: "ST",
       highlights: [
-        "Architected foundational ETL pipelines processing high-volume customer interaction signals from disparate SaaS systems.",
-        "Pioneered deterministic agent workflows using loop engineering principles and ASD-STE100 prompt standardization.",
-        "Built 100% Terraform-managed GCP infrastructure with automated CI/CD and security governance.",
-        "Engineered extensible dynamic widgets framework and database optimization pipelines with Alembic.",
+        "Architected foundational ETL streaming pipeline handling continuous high-volume ingestion from dozens of third-party SaaS platforms.",
+        "Engineered decoupled, event-driven asynchronous architecture powered by Google Cloud Pub/Sub and PostgreSQL.",
+        "Built 100% Terraform-managed GCP infrastructure ensuring reproducible multi-environment deployment and strict IAM policies.",
+        "Implemented natural language querying engine enabling intuitive customer analytics with deterministic validation layers.",
       ],
       projects: [
         {
           id: "statisfy-etl",
-          name: "Foundational Infra for ETL & Reactive Pipelines",
+          name: "Foundational ETL & Reactive Event Streaming Pipeline",
           period: "Jan 2024 - Present",
-          tagline: "High-throughput asynchronous data ingestion and transformation layer",
+          tagline: "Resilient asynchronous data ingestion and transformation backbone",
           description:
-            "Engineered the core ETL backbone responsible for ingesting, transforming, and persisting heterogeneous customer interaction events, conversation transcripts, and telemetry across dozens of customer platforms.",
+            "Engineered the core streaming backbone responsible for ingesting, transforming, and persisting high-velocity interaction records, transcripts, and telemetry across enterprise customer touchpoints.",
           problem:
-            "Third-party webhook streams were irregular, bursting, and had unstandardized schemas. Direct synchronous processing caused bottlenecks, rate-limiting, and data drop risks.",
+            "Third-party webhook streams arrived in unpredictable, bursty volumes with disparate payloads. Synchronous processing created severe pipeline stalls, rate-limiting violations, and dropped events.",
           architecture:
-            "Decoupled the ingestion layer using Google Cloud Pub/Sub with dead-letter queue topics and async consumer worker pools. Designed relational PostgreSQL schemas with Alembic migrations, partition pruning, and connection pooling for sub-50ms query response times.",
+            "Architected a decoupled event ingestion layer leveraging Google Cloud Pub/Sub with dead-letter queueing and asynchronous worker pools. Implemented PostgreSQL database schemas with Alembic versioning, composite indexing, and partition pruning to maintain sub-50ms query response times.",
           keyPoints: [
-            "Constructed foundational infra for ETL pipelines with automated retry logic and exponential backoff.",
+            "Engineered fault-tolerant ingestion pipelines with exponential backoff and automated retry buffers.",
             "Integrated Google Cloud Pub/Sub for resilient asynchronous message processing and event choreography.",
-            "Optimized PostgreSQL databases with composite indices, slow query profiling, and schema evolution via Alembic.",
-            "Authored operational excellence rulebooks for zero-downtime maintenance and disaster recovery.",
+            "Optimized relational database performance through connection pooling, query tuning, and schema evolution via Alembic.",
+            "Authored operational excellence runbooks for zero-downtime maintenance and disaster recovery.",
           ],
           techStack: ["Python", "Google Cloud Pub/Sub", "PostgreSQL", "Alembic", "Docker", "GCP", "REST API"],
-          scale: "Real-time streaming ingestion across multi-tenant enterprise accounts",
+          scale: "Continuous streaming ingestion across enterprise accounts",
         },
         {
-          id: "statisfy-agentic-ai",
-          name: "Agentic AI & Natural Language Querying Engine",
+          id: "statisfy-nl-query",
+          name: "Natural Language Analytics & Data Retrieval Engine",
           period: "Jan 2024 - Present",
-          tagline: "Deterministic AI agent execution loops with ASD-STE100 prompt schemas",
+          tagline: "Reliable natural language translation and structured data querying",
           description:
-            "Built autonomous AI agent capabilities allowing Customer Success Managers (CSMs) to perform complex natural language inquiries into account health, product usage trends, and proactive churn signals.",
+            "Developed an analytics retrieval layer enabling Customer Success teams to perform ad-hoc natural language queries over complex customer health signals, usage trends, and retention metrics.",
           problem:
-            "Standard LLM integrations often suffered from non-deterministic outputs, hallucinations, and unverified analytics generation.",
+            "Standard conversational models generated invalid queries, lacked relational schema awareness, and produced hallucinated metrics without deterministic verification.",
           architecture:
-            "Adopted ASD-STE100 (Simplified Technical English) controlled language schemas to enforce semantic precision in agent system prompts. Designed an autonomous agent execution loop with self-correcting validation passes: the loop inspects generated SQL/queries, evaluates syntax and semantic validity, and self-repairs prior to presenting results.",
+            "Architected a schema-constrained query generation pipeline that binds to PostgreSQL metadata definitions. Designed deterministic verification passes to validate syntax, enforce relational safety boundaries, and confirm query bounds before data retrieval.",
           keyPoints: [
-            "Implemented Loop Engineering: shifting focus from prompt-only tricks to self-evaluating execution loops with deterministic stop/retry criteria.",
-            "Applied ASD-STE100 standard to eliminate syntactic ambiguity and significantly reduce human code-review overhead.",
-            "Created automated evaluation pipelines verifying agent reliability on complex multi-table analytics queries.",
+            "Constructed schema-aware translation layers to convert natural language queries into safe, parameterized SQL.",
+            "Implemented multi-stage evaluation checks verifying query correctness and data integrity before returning answers.",
+            "Drastically reduced time-to-insight for non-technical stakeholders querying multi-table relational datasets.",
           ],
-          techStack: ["LLMs", "Python", "Loop Engineering", "ASD-STE100", "LangChain", "Vector Embeddings"],
-          scale: "Enterprise-grade natural language querying engine",
+          techStack: ["Python", "SQL", "PostgreSQL", "Vector Embeddings", "FastAPI", "Data Modeling"],
+          scale: "Ad-hoc complex analytics over multi-table relational datasets",
         },
         {
           id: "statisfy-gcp-terraform",
-          name: "Terraform-Based GCP Infrastructure & Cloud Native Stack",
+          name: "Terraform-Based GCP Infrastructure & Cloud Architecture",
           period: "Jan 2024 - Present",
-          tagline: "Declarative Infrastructure-as-Code for multi-environment cloud architecture",
+          tagline: "Declarative Infrastructure-as-Code for multi-environment production stack",
           description:
-            "Designed and automated complete cloud infrastructure provisioning on Google Cloud Platform using Terraform modules.",
+            "Designed and automated complete cloud infrastructure provisioning on Google Cloud Platform using modular Terraform definitions.",
           problem:
-            "Manual resource provisioning creates security drift, inconsistent testing environments, and high operational friction.",
+            "Manual resource provisioning caused configuration drift between staging and production, prolonged environment setup, and created security risks.",
           architecture:
-            "Structured modular Terraform configurations covering Cloud Run microservices, Cloud SQL instances, Cloud Pub/Sub topics, VPC networks, Cloud Storage buckets, and fine-grained IAM service accounts.",
+            "Authored reusable Terraform modules encapsulating Cloud Run microservices, Cloud SQL database clusters, Pub/Sub messaging topologies, VPC peering, and fine-grained IAM service roles.",
           keyPoints: [
-            "100% Infrastructure as Code with zero manual cloud modifications.",
-            "Automated multi-environment parity (staging, production) deployed via CI/CD.",
-            "Enforced least-privilege IAM service identity per microservice component.",
+            "Achieved 100% Infrastructure-as-Code with state locking and zero manual cloud mutations.",
+            "Automated multi-environment parity deployed through declarative CI/CD pipelines.",
+            "Enforced zero-trust security postures and least-privilege IAM service access.",
           ],
-          techStack: ["Terraform", "Google Cloud Platform", "Cloud Run", "Cloud SQL", "IAM", "GCP VPC"],
-          scale: "Production multi-region cloud infrastructure",
+          techStack: ["Terraform", "Google Cloud Platform", "Cloud Run", "Cloud SQL", "GCP VPC", "IAM"],
+          scale: "Multi-environment production cloud infrastructure",
         },
         {
           id: "statisfy-integrations",
-          name: "Systemic Bootstrap of 3P Integrations",
+          name: "Enterprise SaaS Integration Engine & Connector Bootstrap",
           period: "Jan 2024 - Present",
-          tagline: "Extensible connector ecosystem for enterprise SaaS tools",
+          tagline: "Canonical adapter architecture for enterprise SaaS ecosystems",
           description:
-            "Architected a scalable connector framework enabling rapid onboarding of enterprise data sources such as Gong, Avoma, Slack, Paragon, Simplesat, Chorus, and CRM tools.",
+            "Architected a scalable connector framework enabling rapid onboarding of enterprise data sources such as Gong, Avoma, Slack, Paragon, Simplesat, Chorus, and external CRMs.",
           problem:
-            "Each 3rd-party vendor provides differing authentication models (OAuth2, API tokens), custom webhooks, rate limits, and response schemas.",
+            "Disparate third-party SaaS vendors use differing authentication mechanisms, payload formats, rate limits, and webhook models.",
           architecture:
-            "Created an adapter pattern engine that normalizes foreign data structures into canonical internal events, with centralized rate-limit tracking and webhook authentication validation.",
+            "Designed an extensible adapter engine that translates external vendor schemas into normalized canonical internal models, backed by distributed rate limiting, webhook verification, and replay buffers.",
           keyPoints: [
-            "Seamlessly integrated with Avoma, Gong, Slack, Paragon, Simplesat, Chorus.",
-            "Built generic communication infrastructure for outbound alerts (Email, Slack, webhooks).",
-            "Designed extendible widgets platform rendering customized insights across external dashboards.",
+            "Seamlessly integrated connectors for Gong, Avoma, Slack, Paragon, Simplesat, Chorus.",
+            "Engineered generic communication infrastructure for transactional outbound notifications (Email, Slack, Webhooks).",
+            "Designed extendible dynamic widgets platform rendering custom signals across external dashboards.",
           ],
           techStack: ["Python", "OAuth2", "Webhooks", "Slack API", "REST", "JSON Schema"],
           scale: "Dozens of enterprise SaaS connectors",
@@ -195,87 +195,87 @@ export const resumeData = {
       location: "Bengaluru, Karnataka, India",
       companyType: "FinTech Unicorn · Lending · Mutual Funds · Insurance",
       summary:
-        "Managed and led high-performing engineering teams (6-7 engineers) delivering mission-critical financial platforms, high-throughput KYC verification, and distributed incident observability.",
+        "Led core platform engineering charters across hyper-growth FinTech verticals. Architected regulatory-compliant KYC infrastructure, automated incident observability, and high-availability aggregation engines.",
       accentColor: "emerald",
       logoBadge: "NV",
       highlights: [
-        "Led engineering team of 6 building the centralized KYC Platform serving Lending, Mutual Funds, and Insurance complying with RBI, IRDAI, and SEBI.",
-        "Architected Krakatoa Platform for end-to-end 3P financial integrations observability and automated incident management.",
-        "Built configurable Application Platform reducing new financial product journey rollout from weeks to days.",
-        "Spearheaded enterprise-wide Kubernetes migration and engineered distributed ID generator.",
+        "Architected the centralized KYC Platform serving Lending, Mutual Funds, and Insurance in full compliance with RBI, IRDAI, and SEBI regulations.",
+        "Built low-code configuration framework enabling new financial business lines and co-lending partners to launch verification journeys in hours.",
+        "Engineered Krakatoa Platform for end-to-end third-party financial partner observability, automated circuit-breaking, and blast-radius impact analysis.",
+        "Built configurable Financial Product Application Platform and high-throughput multi-tenant request aggregation engine.",
       ],
       projects: [
         {
           id: "navi-kyc",
-          name: "Enterprise KYC Platform",
+          name: "Enterprise Regulatory KYC Platform",
           period: "Apr 2023 - Jan 2024",
-          tagline: "Regulatory-compliant, low/no-code identity verification platform",
+          tagline: "Mission-critical identity verification engine compliant with RBI, IRDAI & SEBI",
           description:
-            "Designed, maintained, and optimized the unified KYC Platform serving all Navi business verticals (Personal Loans, Home Loans, Mutual Funds, and Health Insurance). Managed a team of 6 engineers.",
+            "Architected, scaled, and maintained the unified KYC platform serving all Navi business verticals (Cash Loans, Home Loans, Mutual Funds, Health Insurance) and co-lending banking partners.",
           problem:
-            "Each financial business vertical faced distinct, continuously shifting regulatory mandates from RBI, IRDAI, and SEBI. Hardcoded flows resulted in frequent regressions, high partner onboarding friction, and fragmented auditability.",
+            "Each financial vertical faced distinct, frequently updated regulatory mandates from RBI, IRDAI, and SEBI. Hardcoded validation flows created release bottlenecks, high partner onboarding friction, and audit compliance vulnerabilities.",
           architecture:
-            "Architected an extensible KYC platform orchestrating document verification (Aadhaar, PAN, CKYC, Digilocker, Video KYC) with modular validation pipelines. Implemented low-code configuration schemas enabling product managers to adjust verification steps without code deployments.",
+            "Architected an extensible identity verification engine orchestrating document verification (Aadhaar, PAN, CKYC, Digilocker, Video KYC) through pluggable validation pipelines. Designed a low-code configuration schema enabling product teams to configure bespoke verification rules per business line with zero code changes.",
           keyPoints: [
-            "Managed team of 6 engineers; drove technical design, sprint planning, and architectural reviews.",
-            "Handled multi-tier data collection, OCR, automated verification, and fraud detection.",
-            "Built regulatory compliance consoles serving co-lending banking partners and regulatory audits.",
-            "Engineered per-tenant billing audit logs, tracking provider costs across millions of verifications.",
+            "Led platform engineering charter; drove system architecture, regulatory audits, and cross-functional technical alignment.",
+            "Engineered real-time data collection, OCR, automated verification pipelines, and fraud prevention checks.",
+            "Built regulatory compliance consoles and automated audit logging for external co-lending partners and regulatory inspections.",
+            "Implemented fine-grained per-tenant cost attribution and usage tracking across millions of third-party API invocations.",
           ],
           techStack: ["Java", "Spring Boot", "MySQL", "Kafka", "Redis", "AWS", "Microservices", "Docker"],
-          scale: "Millions of user KYC verifications across Navi's entire ecosystem",
+          scale: "Millions of KYC verifications across Navi's entire multi-vertical ecosystem",
         },
         {
           id: "navi-krakatoa",
-          name: "Krakatoa Platform — 3P Integrations Observability & Incident Response",
+          name: "Krakatoa Platform — 3P Integrations Observability & Automated Incident Response",
           period: "Feb 2023 - Mar 2023",
-          tagline: "Actionable incident lifecycle management and distributed impact analysis",
+          tagline: "Autonomous incident containment and distributed blast-radius impact analysis",
           description:
-            "Engineered an automated observability and incident lifecycle management platform for hundreds of external third-party integrations (banking APIs, payment gateways, credit bureaus, stock exchange brokers).",
+            "Built an automated incident response and observability platform monitoring hundreds of external financial integration touchpoints (banking partners, broker networks, payment gateways, credit bureaus).",
           problem:
-            "External partner outages occurred without prior notice, leaving downstream financial transactions hanging and causing customer friction before internal alerts were manually triaged.",
+            "Unannounced partner outages left high-value customer transactions in indeterminate states, leading to support escalations before internal teams could manually diagnose affected accounts.",
           architecture:
-            "Built an event subscriber listening to Prometheus Alertmanager. On anomaly detection, Krakatoa automatically triggered circuit-breaking, initiated incident tracking tickets, and spawned distributed impact analysis queries across production databases and Amazon Athena serverless data lakes.",
+            "Developed an automated event consumer subscribed to Prometheus Alertmanager. On anomaly detection, Krakatoa automatically triggered circuit breakers to prevent cascaded failures and initiated distributed blast-radius impact queries across production databases and Amazon Athena serverless data lakes.",
           keyPoints: [
-            "Autonomous incident management lifecycle triggered by Prometheus Alertmanager signals.",
-            "Distributed impact analysis: rapidly calculated affected customer orders and transaction volumes across AWS Athena.",
-            "Reduced mean-time-to-detection (MTTD) and mean-time-to-containment (MTTC) by over 70%.",
+            "Autonomous incident management lifecycle triggered directly by Prometheus Alertmanager signals.",
+            "Distributed blast-radius impact analysis: rapidly calculated affected customer orders and transaction volumes across AWS Athena.",
+            "Reduced mean-time-to-detection (MTTD) and incident containment time by over 70%.",
           ],
           techStack: ["Python", "Prometheus Alertmanager", "AWS Athena", "MySQL", "Distributed Tracing", "Grafana"],
-          scale: "Monitored 100+ critical financial third-party touchpoints",
+          scale: "Monitored 100+ critical financial third-party endpoints",
         },
         {
           id: "navi-application-platform",
-          name: "Financial Product Application Platform",
+          name: "Financial Product Journey Application Platform",
           period: "May 2022 - Jan 2023",
-          tagline: "Configurable state-machine for financial customer journeys",
+          tagline: "Modular state-machine platform for financial customer journeys",
           description:
-            "Led a team of 7 engineers to decompose user onboarding and application journeys across all financial products into modular, reusable architectural building blocks.",
+            "Decomposed complex loan and insurance application journeys across all digital financial products into modular, reusable architectural building blocks.",
           problem:
-            "Every new financial product launched required writing bespoke user journey workflows from scratch, creating massive code duplication and maintenance liabilities.",
+            "Each new financial product required building customer funnels from scratch, leading to severe code duplication, inconsistent edge-case handling, and prolonged time-to-market.",
           architecture:
-            "Extracted recurring onboarding patterns into a configurable workflow engine. Allowed business units to onboard new lending or insurance journeys purely by composing state machines and validation hooks.",
+            "Extracted recurring onboarding stages into a configurable workflow state machine. Enabled business teams to deploy new lending or insurance customer journeys purely through JSON configurations and validation hooks.",
           keyPoints: [
-            "Led agile team of 7 engineers through complex retro-code refactoring and architectural modernization.",
-            "Designed failsafe execution guarantees ensuring zero state loss during distributed step transitions.",
-            "Enabled rapid A/B testing and funnel optimization through dynamic journey configurations.",
+            "Refactored legacy monolithic onboarding logic into modular, resilient microservices.",
+            "Designed state-machine execution guarantees ensuring absolute consistency during distributed step transitions.",
+            "Enabled rapid funnel experimentation and dynamic branching with zero code deployments.",
           ],
           techStack: ["Java", "Spring Boot", "Redis", "PostgreSQL", "Kafka", "Microservices"],
-          scale: "Universal onboarding engine across all Navi digital products",
+          scale: "Universal onboarding platform across all Navi digital financial products",
         },
         {
           id: "navi-aggregation",
           name: "Multi-Tenant Request Aggregation Platform",
           period: "Dec 2021 - Apr 2022",
-          tagline: "Linearly scalable, isolated request batching and fan-out engine",
+          tagline: "Horizontally scalable, isolated request batching and dispatch engine",
           description:
-            "Engineered a high-performance platform enabling asynchronous request aggregation, enrichment, and dispatch based on dynamic configurable parameters.",
+            "Engineered a high-throughput platform enabling asynchronous request aggregation, enrichment, and batch dispatch based on configurable parameters.",
           problem:
-            "High-frequency single requests overwhelmed external partner endpoints and generated excessive network overhead and vendor call charges.",
+            "High-frequency single requests overwhelmed external partner endpoints, causing severe rate-limiting penalties and excessive per-call network costs.",
           architecture:
-            "Built a multi-tenant, horizontally scalable batching engine adhering to strict tenets: complete data isolation between business lines, linear scalability, immutable audit trail, and configurable sink adapters.",
+            "Engineered a multi-tenant, linearly scalable batching engine adhering to strict tenets: complete data isolation between business lines, linear scalability, immutable audit trails, and pluggable sink adapters.",
           keyPoints: [
-            "Supported multiple primary tenants and nested sub-tenants with zero cross-tenant data leakage.",
+            "Supported multiple primary business tenants and sub-tenants with zero cross-tenant data leakage.",
             "Provided configurable request enrichment, custom tagging, and pluggable sink dispatchers.",
             "Guaranteed delivery with at-least-once processing semantics.",
           ],
@@ -284,21 +284,21 @@ export const resumeData = {
         },
         {
           id: "navi-k8s-idgen",
-          name: "Kubernetes Migration & Distributed ID Generation",
+          name: "Kubernetes Migration & Distributed Sequence Generator",
           period: "Feb 2021 - Jun 2021",
-          tagline: "Infrastructure modernization and distributed sequence generation",
+          tagline: "Containerization adoption and monotonically increasing distributed ID system",
           description:
-            "Spearheaded organizational containerization onto Kubernetes and designed a distributed sequence generator for human-readable audit IDs.",
+            "Spearheaded enterprise-wide containerization onto Kubernetes and designed a distributed sequence generator for human-readable financial transaction IDs.",
           problem:
-            "Legacy monolithic deployments lacked autoscaling. Distributed microservices generated fragmented, non-sequential IDs that were impossible to audit manually.",
+            "Legacy VM deployments lacked elastic autoscaling. High-concurrency financial services generated fragmented, non-sequential IDs that hindered transaction reconciliation and auditing.",
           architecture:
-            "Created reusable Helm templates and CI/CD automation to migrate multiple backend services to Kubernetes clusters. Developed an incremental, human-readable distributed ID generation algorithm using Redis Lua scripts ensuring minimal sequence holes and per-tenant isolation.",
+            "Created reusable Helm deployment blueprints and CI/CD pipelines to onboard backend services onto Kubernetes clusters. Developed an incremental, sequence-ordered distributed ID algorithm using Redis Lua scripts ensuring minimal sequence gaps and tenant isolation.",
           keyPoints: [
-            "Mentored and guided cross-functional teams in adopting Kubernetes deployment best practices.",
+            "Led cross-team adoption of Kubernetes container orchestration and deployment best practices.",
             "Engineered distributed ID generation algorithm guaranteeing human readability and monotonicity across high-concurrency clusters.",
           ],
           techStack: ["Kubernetes (EKS)", "Docker", "Helm", "Redis", "Java", "CI/CD"],
-          scale: "Company-wide infrastructure adoption",
+          scale: "Company-wide infrastructure modernization",
         },
       ],
     },
@@ -311,14 +311,14 @@ export const resumeData = {
       location: "Bengaluru, Karnataka, India",
       companyType: "E-Commerce Market Leader · Pricing, Affordability & Order Path",
       summary:
-        "5.5+ years of driving core transactional architecture across Order Path, Pricing & Promotions, and Affordability charters. Handled 500k+ concurrent requests during peak Big Billion Days (BBD).",
+        "5.5+ years of driving core transactional architecture across Order Path, Pricing & Promotions, and Affordability charters. Hardened systems to sustain 500,000+ concurrent requests during peak Big Billion Days.",
       accentColor: "blue",
       logoBadge: "FK",
       highlights: [
-        "Architected APEX 2.1 exchange platform with multi-tier database (Cassandra + Redis) for strong read-after-write consistency.",
-        "Led Assured Buyback Programme order-path integration across 20+ microservices and 8-10 upstream/downstream teams.",
-        "Scaled microservices to withstand 500,000+ concurrent requests during The Big Billion Days 2016 and 2017.",
-        "Honored with 4 marquee awards: Flipkart CEO Excellence Award (2017), two HiFi Awards, and Instant Karma Award.",
+        "Architected APEX exchange platform featuring multi-tier storage (Cassandra + Redis) for high write-throughput and strict read-after-write consistency.",
+        "Led Assured Buyback technical roadmap and order-path integration across 20+ microservices and 15+ cross-functional teams.",
+        "Scaled and performance-tuned microservices to handle 500,000+ concurrent requests during The Big Billion Days 2016 and 2017.",
+        "Awarded Flipkart CEO Excellence Award (2017), two HiFi Awards, and Instant Karma Award for technical leadership.",
       ],
       projects: [
         {
@@ -327,16 +327,16 @@ export const resumeData = {
           period: "May 2019 - Dec 2020",
           tagline: "Scalable multi-tenant exchange platform with Cassandra & Redis",
           description:
-            "Built the core exchange platform enabling customers to trade in used devices for instant discounts on Flipkart orders. Central engineering team anchor collaborating across 15+ cross-functional teams.",
+            "Architected the core exchange platform enabling customers to trade in used devices for instant purchase discounts. Central engineering anchor collaborating with 15+ cross-functional teams.",
           problem:
-            "Exchange transactions required complex coordination across product discovery, checkout, forward delivery, field verification, and reverse logistics. Previous architectures could not scale under Big Billion Days peak write loads.",
+            "Exchange transactions required complex coordination across product discovery, checkout, forward delivery, field verification, and reverse fulfillment. High-volume write transactions overwhelmed legacy relational storage during flash sales.",
           architecture:
-            "Engineered a multi-tenant platform with a multi-tier database topology: Apache Cassandra for resilient, partitioned write-heavy storage, and Redis for microsecond read caches. Developed a custom read-after-write consistency layer guaranteeing transactional updates across order transitions.",
+            "Engineered a multi-tenant platform with a multi-tier database topology: Apache Cassandra for partitioned, write-heavy durability, and Redis for microsecond read caches. Developed a custom read-after-write consistency layer guaranteeing real-time status updates across order transitions.",
           keyPoints: [
-            "Central team anchor leading technical contract negotiations across 15+ upstream and downstream teams.",
+            "Central engineering anchor driving interface contracts and architectural alignment across 15+ partner teams.",
             "Onboarded Cassandra with automated backup, repair, and disaster recovery procedures.",
             "Designed and implemented diagnostic device grading algorithms for pickup agents.",
-            "Mentored junior developers through architectural reviews and comprehensive design closures.",
+            "Mentored engineering colleagues through rigorous architectural reviews and design closures.",
           ],
           techStack: ["Java", "Apache Cassandra", "Redis", "MySQL", "Dropwizard", "Microservices"],
           scale: "15+ cross-functional teams, multi-tier data architecture supporting millions of exchanges",
@@ -345,11 +345,11 @@ export const resumeData = {
           id: "flipkart-abb",
           name: "Assured Buyback (ABB) Programme",
           period: "Mar 2017 - Apr 2018",
-          tagline: "Affordability program touching 20+ internal microservices and 10 order-path teams",
+          tagline: "Affordability charter integration across 20+ microservices and 10 order-path teams",
           description:
-            "Part of core team that designed the technical roadmap, solutioned, and implemented the end-to-end Assured Buyback Redemption journey from Add-to-Cart to reverse logistics fulfillment.",
+            "Part of core team that designed the technical roadmap, solutioned, and implemented the end-to-end Assured Buyback Redemption journey from Add-to-Cart through post-order reverse logistics.",
           problem:
-            "Assured Buyback had to seamlessly integrate into every critical step of the high-throughput order path without increasing P99 latency by more than 5 milliseconds.",
+            "Assured Buyback had to deeply integrate into every critical step of the high-throughput order path without increasing P99 checkout latency by more than 5 milliseconds.",
           architecture:
             "Represented the offers charter across 8-10 order-path teams. Solutioned touchpoints across 20+ microservices. Leveraged Aerospike for sub-millisecond promotion evaluations, MySQL for transactional integrity, and Apache Storm for event streaming.",
           keyPoints: [
@@ -364,13 +364,13 @@ export const resumeData = {
           id: "flipkart-bbd-scale",
           name: "The Big Billion Days Scale Readiness (2016 & 2017)",
           period: "Jun 2016 - Sep 2017",
-          tagline: "Hardening high-throughput transactional systems for 500,000+ concurrent requests",
+          tagline: "Hardening transactional systems for 500,000+ concurrent requests",
           description:
             "Stress tested, profiled, and scaled the offers and pricing engine to withstand massive shopping spikes during India's premier e-commerce festival.",
           problem:
-            "Flash sales and festival traffic spikes generated extreme load, leading to thread pool exhaustion, JVM stop-the-world GC pauses, and cache stampedes.",
+            "Flash sales generated unprecedented traffic surges, causing thread pool exhaustion, JVM stop-the-world GC pauses, and cache stampedes.",
           architecture:
-            "Used Java Flight Recorder (JFR) to identify lock contention and memory allocation hotspots. Replaced blocking synchronizations with lock-free structures. Optimized JMeter distributed load generation test harnesses. Deployed parallel auto-scaling microservices fronted by Hystrix circuit breakers and OpenTSDB metrics.",
+            "Used Java Flight Recorder (JFR) to profile lock contention, memory allocation hotspots, and thread synchronization bottlenecks. Replaced blocking synchronizations with lock-free structures. Optimized JMeter distributed load harnesses and deployed parallel auto-scaling microservices with Hystrix circuit breakers and OpenTSDB metrics.",
           keyPoints: [
             "Successfully scaled system to serve over 500,000+ concurrent requests with zero critical outages.",
             "Tuned JVM garbage collection (G1GC) parameters and Linux TCP socket buffers.",
@@ -460,13 +460,13 @@ export const resumeData = {
       role: "Software Engineer",
       period: "Jul 2013 - May 2015",
       location: "Noida / Bengaluru, India",
-      companyType: "Global Consumer Electronics Leader · Tizen Operating System",
+      companyType: "Global Technology Leader · Tizen Operating System",
       summary:
         "Contributed to core operating system module incubation and low-level system performance optimization on Tizen OS.",
       accentColor: "cyan",
       logoBadge: "SS",
       highlights: [
-        "Performed well in incubation of a new system module in Tizen OS for resource-constrained smart devices.",
+        "Performed incubation of a new system module in Tizen OS for resource-constrained smart devices.",
         "Recognized with prestigious Spot Award by the Director (April 2015).",
         "Optimized inter-process communication (IPC) and memory footprint for embedded services.",
       ],
@@ -500,7 +500,7 @@ export const resumeData = {
       date: "Sep 2019",
       icon: "Award",
       description:
-        "Awarded for exceptional ownership of all Order Path system interactions. Successfully resolved difficult cross-team conversations with multiple engineering stakeholders, drove end-to-end integration testing, and took complete proactive ownership to unblock critical delivery milestones.",
+        "Conferred for exceptional ownership of core Order Path system integrations. Successfully resolved critical cross-team architectural blockers across multiple engineering stakeholders, drove end-to-end integration testing, and unblocked high-stakes delivery milestones.",
     },
     {
       title: "CEO Excellence Award — Best Project",
@@ -540,7 +540,7 @@ export const resumeData = {
       date: "Jan 2010",
       icon: "BookOpen",
       description:
-        "Awarded First Prize for presenting research on advanced computer networking and routing optimization.",
+        "Awarded First Prize for presenting research on advanced computer networking and heuristic routing optimization.",
     },
   ],
 
@@ -576,28 +576,28 @@ export const resumeData = {
 
   articles: [
     {
-      title: "How LLM's changed the way I work!",
-      platform: "LinkedIn Pulse",
-      date: "Jul 10, 2024",
-      url: "https://www.linkedin.com/pulse/how-llms-changed-way-i-work-saurabh-araiyer-vk9dc",
-      summary:
-        "Exploring the shift from treating LLMs as simple conversational search engines to treating them as autonomous reasoning partners in complex software engineering workflows.",
-    },
-    {
-      title: "Kafka user's Google-Pub/Sub experience",
-      platform: "LinkedIn Pulse",
-      date: "Jun 23, 2024",
+      title: "Kafka User's Google-Pub/Sub Experience",
+      platform: "Architecture Note",
+      date: "Jun 2024",
       url: "https://www.linkedin.com/pulse/kafka-users-google-pubsub-experience-saurabh-araiyer-mv3lc",
       summary:
-        "A practical comparison of self-hosted Apache Kafka and Confluent Cloud versus managed Google Cloud Pub/Sub, detailing operational simplicity, ordering tradeoffs, and cost models.",
+        "Architectural comparison of self-hosted Apache Kafka and Confluent Cloud versus managed Google Cloud Pub/Sub, detailing operational simplicity, ordering tradeoffs, and cost models in production.",
     },
     {
-      title: "Loop Engineering & ASD-STE100 in Agentic Workflows",
-      platform: "Technical Note / Post",
+      title: "How LLM's Changed The Way I Work!",
+      platform: "Engineering Reflection",
+      date: "Jul 2024",
+      url: "https://www.linkedin.com/pulse/how-llms-changed-way-i-work-saurabh-araiyer-vk9dc",
+      summary:
+        "Reflections on evolving from simple conversational prompts to structured, tool-augmented reasoning engines in real-world systems engineering workflows.",
+    },
+    {
+      title: "Reliability & Evaluation in AI Workflows",
+      platform: "Technical Note",
       date: "2024",
       url: "https://www.linkedin.com/in/saurabharaiyer",
       summary:
-        "Why the loop around an agent matters more than the initial prompt: what it verifies, when it retries, and how aerospace Simplified Technical English (ASD-STE100) eliminates review ambiguity.",
+        "Why deterministic verification, bounded execution, and state checks matter far more than prompt tricks when integrating AI capabilities into enterprise data pipelines.",
     },
   ],
 
@@ -611,7 +611,7 @@ export const resumeData = {
       activities: [
         "Training and Placement Representative (Oct 2011 - May 2013)",
         "Executive Member, Student's Gymkhana (Jul 2012 - Jun 2013)",
-        "Co-organized campus cultural and technical festivals; bridged student-faculty communications",
+        "Organized technical and cultural fests; served as student-administration liaison",
       ],
     },
   ],

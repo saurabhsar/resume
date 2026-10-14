@@ -28,12 +28,11 @@ export default function ExperienceTimeline({
 }) {
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Extract all unique technologies across all projects for the filter bar
+  // Extract core engineering technologies across all projects for the filter bar
   const allTechnologies = [
     'All',
     'Java',
     'Python',
-    'LLMs',
     'Google Cloud Pub/Sub',
     'Apache Cassandra',
     'Redis',
