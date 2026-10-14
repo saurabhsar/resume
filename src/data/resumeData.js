@@ -10,7 +10,7 @@ export const resumeData = {
     website: "https://saurabh.araiyer.me",
     blog: "http://decapsulatingabstraction.blogspot.com",
     summary:
-      "Staff Software Engineer with 13+ years of experience architecting high-throughput distributed systems, mission-critical financial platforms, and cloud-native data backbones. Proven track record of scaling transactional e-commerce infrastructure to 500,000+ concurrent requests during peak flash sales (Flipkart Big Billion Days), engineering multi-vertical regulated FinTech identity platforms compliant with RBI/IRDAI/SEBI (Navi), and leading foundational event-driven ETL systems on GCP (Statisfy). Focused on high-availability data topologies, low-latency microservices, and operational resilience.",
+      "Staff Software Engineer with 13+ years of experience architecting high-throughput distributed systems, mission-critical financial platforms, and cloud-native data backbones. Proven track record of scaling transactional e-commerce infrastructure to 500,000+ concurrent requests during peak flash sales (Flipkart Big Billion Days), engineering multi-vertical regulated FinTech identity platforms compliant with RBI/IRDAI/SEBI (Navi), and building real-time CRM sync, ingestion pipelines and an external developer platform on GCP (Statisfy). Focused on high-availability data topologies, low-latency microservices, and operational resilience.",
   },
 
   stats: [
@@ -72,7 +72,7 @@ export const resumeData = {
       skills: [
         { name: "Java", level: "Expert", tags: ["Spring Boot", "Dropwizard", "JPA/Hibernate", "JFR / JVM Profiling"] },
         { name: "Python", level: "Expert", tags: ["Data Pipelines", "AsyncIO", "FastAPI", "Automation"] },
-        { name: "SQL & Schema Architecture", level: "Expert", tags: ["Query Optimization", "Complex Joins", "Partition Pruning"] },
+        { name: "SQL & Schema Architecture", level: "Expert", tags: ["Query Optimization", "Complex Joins"] },
         { name: "Go & Bash", level: "Proficient", tags: ["Systems Tooling", "CLI Automation", "Linux Internals"] },
       ],
     },
@@ -83,7 +83,7 @@ export const resumeData = {
         { name: "System Architecture & RFCs", level: "Expert", tags: ["End-to-End Design", "Contract Closure", "Failure Mode Analysis"] },
         { name: "Cross-Functional Leadership", level: "Expert", tags: ["15+ Partner Charters", "Order Path Coordination", "Stakeholder Alignment"] },
         { name: "Engineering Team Mentorship", level: "Expert", tags: ["Design Reviews", "Code Standards", "Talent Growth"] },
-        { name: "Operational Excellence", level: "Expert", tags: ["Post-Mortems", "Runbooks", "SLAs & SLOs"] },
+        { name: "Operational Excellence", level: "Expert", tags: ["Post-Mortems", "SLAs & SLOs"] },
       ],
     },
   ],
@@ -95,18 +95,97 @@ export const resumeData = {
       role: "Founding Engineer / Tech Lead",
       period: "Jan 2024 - Present",
       location: "Bengaluru, Karnataka, India",
-      companyType: "Enterprise AI & Data Intelligence Platform",
+      companyType: "Enterprise AI & Customer Intelligence Platform",
       summary:
-        "Architecting core data platform foundations, cloud-native GCP infrastructure, and resilient event streaming pipelines powering automated enterprise customer intelligence.",
+        "Founding engineer. Owned data ingestion, bidirectional CRM sync, the external developer platform, and test infrastructure across backend, frontend and GCP.",
       accentColor: "indigo",
       logoBadge: "ST",
       highlights: [
-        "Architected foundational ETL streaming pipeline handling continuous high-volume ingestion from dozens of third-party SaaS platforms.",
-        "Engineered decoupled, event-driven asynchronous architecture powered by Google Cloud Pub/Sub and PostgreSQL.",
-        "Built 100% Terraform-managed GCP infrastructure ensuring reproducible multi-environment deployment and strict IAM policies.",
-        "Implemented natural language querying engine enabling intuitive customer analytics with deterministic validation layers.",
+        "Built real-time Salesforce sync on Change Data Capture, running as a dedicated Cloud Run worker pool with per-stream heartbeats.",
+        "Designed bidirectional, multi-CRM sync: values flow in from Salesforce, HubSpot and Gainsight and write back to each CRM with retry limits and a sync-issues console.",
+        "Built the customer portal and developer platform: a public SDK, token exchange, publishable keys, custom domains, a public REST API and an MCP server.",
+        "Scaled the e2e test platform and took the core ingestion service to 82.8% line coverage, surfacing silent production defects.",
       ],
       projects: [
+        {
+          id: "statisfy-crm-sync",
+          name: "Real-Time & Bidirectional CRM Sync Engine",
+          period: "Feb 2025 - Present",
+          tagline: "Change Data Capture ingestion and write-back across multiple CRMs",
+          description:
+            "Built the sync layer that keeps accounts, contacts and opportunities consistent between Statisfy and the customer's CRMs.",
+          problem:
+            "Polled delta sync left CRM data hours stale, burned API quota, and could not tell a CRM edit apart from a Statisfy edit. Write-back to one CRM did not scale to tenants that run several.",
+          architecture:
+            "Salesforce CDC subscriber in its own Cloud Run worker pool, applying only changed fields stamped with the Salesforce commit time. Delta sync skips CDC-covered objects. Write-back keeps per-field CRM targets and per-record sync state, and pushes each value to every target CRM in one run.",
+          keyPoints: [
+            "Per-stream heartbeats feed a daily schedule monitor, so a silent stream is caught within a day.",
+            "A record stops retrying after five CRM rejections and appears on a Sync Issues page for admins.",
+            "On-demand Force Sync and single-record refresh across Salesforce, HubSpot and Gainsight.",
+            "Admin-selectable CDC objects, with automatic Salesforce setup or guided manual steps.",
+          ],
+          techStack: ["Python", "Salesforce Pub/Sub API", "Cloud Run", "PostgreSQL / AlloyDB", "Cloud Tasks", "React"],
+          scale: "Near-real-time sync for enterprise Salesforce tenants",
+        },
+        {
+          id: "statisfy-slack",
+          name: "Slack & Conversation Ingestion Pipeline",
+          period: "Sep 2024 - Present",
+          tagline: "Reliable, accounted-for message ingestion from customer Slack workspaces",
+          description:
+            "Owned the Slack integration end to end: install, channel-to-customer mapping, real-time ingestion and reconciliation.",
+          problem:
+            "Socket Mode connections dropped without notice, messages went missing with no trace, and a Slack API call for each message hit rate limits.",
+          architecture:
+            "HTTP Events API listener beside Socket Mode, with WebSocket heartbeats, health checks and graceful drain. A v2 pipeline publishes a minimal event and decorates it from the database, with no Slack API call per message. A daily reconciliation republishes missed messages through a line-item queue.",
+          keyPoints: [
+            "Every message the pipeline declines is counted and its reason is logged, so data loss is visible.",
+            "Background mapping of new channels to customers, plus archive and uninstall lifecycle handling.",
+            "Self-serve install with a per-workspace bot name and avatar.",
+            "Call recordings and Slack routed to a priority Cloud Tasks queue.",
+          ],
+          techStack: ["Python", "Slack Events API", "Socket Mode", "Pub/Sub", "Cloud Tasks", "PostgreSQL"],
+          scale: "Continuous ingestion across all customer Slack workspaces",
+        },
+        {
+          id: "statisfy-portal-platform",
+          name: "Customer Portal & Developer Platform",
+          period: "Jun 2026 - Present",
+          tagline: "External SDK, public API and MCP server on one tenant-safe backend",
+          description:
+            "Built the platform that lets customers ship branded portals and integrate with Statisfy programmatically.",
+          problem:
+            "External consumers needed scoped, revocable access to tenant data without app sessions, and each new surface risked forking business rules from the main app.",
+          architecture:
+            "Publishable keys and a token-exchange endpoint issue scoped tokens for the SDK API. Each portal gets its own subdomain, and an hourly reconciler checks custom domains. The public API for surveys and campaigns reuses the app's own service layer, so validation rules stay in one place.",
+          keyPoints: [
+            "Visibility, watcher and account-sharing rules enforced server-side in the SDK.",
+            "The MCP server serves OAuth protected-resource metadata per RFC 9728.",
+            "RBAC role for builders to manage portals and keys.",
+            "Security hardening for the Google CASA assessment: sandboxed email templates, API docs off in production.",
+          ],
+          techStack: ["Python", "FastAPI", "TypeScript", "React", "Clerk", "OAuth2", "MCP"],
+          scale: "Multi-tenant external API and SDK surface",
+        },
+        {
+          id: "statisfy-e2e",
+          name: "End-to-End Test Platform",
+          period: "Apr 2026 - Present",
+          tagline: "DB-validated end-to-end coverage for pipelines, jobs and APIs",
+          description:
+            "Scaled the e2e platform from API checks to a full real-Postgres tier with line-coverage measurement.",
+          problem:
+            "Unit tests mocked the database, so schema-isolation bugs and silent pipeline failures reached production.",
+          architecture:
+            "A real-Postgres test tier for the raw-SQL layer, black-box pipeline harnesses with vendor stubs, and line-coverage measurement for e2e runs, wired to staging CI.",
+          keyPoints: [
+            "Took the core ingestion service from 76% to 82.8% line coverage.",
+            "Coverage waves found and fixed three silent-failure defects.",
+            "DB-validated suites for CRM sync, scheduler and write-back flows.",
+          ],
+          techStack: ["pytest", "Playwright", "PostgreSQL", "Cloud Run Jobs", "GitHub Actions"],
+          scale: "190+ e2e commits contributed",
+        },
         {
           id: "statisfy-etl",
           name: "Foundational ETL & Reactive Event Streaming Pipeline",
@@ -126,25 +205,6 @@ export const resumeData = {
           ],
           techStack: ["Python", "Google Cloud Pub/Sub", "PostgreSQL", "Alembic", "Docker", "GCP", "REST API"],
           scale: "Continuous streaming ingestion across enterprise accounts",
-        },
-        {
-          id: "statisfy-nl-query",
-          name: "Natural Language Analytics & Data Retrieval Engine",
-          period: "Jan 2024 - Present",
-          tagline: "Reliable natural language translation and structured data querying",
-          description:
-            "Developed an analytics retrieval layer enabling Customer Success teams to perform ad-hoc natural language queries over complex customer health signals, usage trends, and retention metrics.",
-          problem:
-            "Standard conversational models generated invalid queries, lacked relational schema awareness, and produced hallucinated metrics without deterministic verification.",
-          architecture:
-            "Architected a schema-constrained query generation pipeline that binds to PostgreSQL metadata definitions. Designed deterministic verification passes to validate syntax, enforce relational safety boundaries, and confirm query bounds before data retrieval.",
-          keyPoints: [
-            "Constructed schema-aware translation layers to convert natural language queries into safe, parameterized SQL.",
-            "Implemented multi-stage evaluation checks verifying query correctness and data integrity before returning answers.",
-            "Drastically reduced time-to-insight for non-technical stakeholders querying multi-table relational datasets.",
-          ],
-          techStack: ["Python", "SQL", "PostgreSQL", "Vector Embeddings", "FastAPI", "Data Modeling"],
-          scale: "Ad-hoc complex analytics over multi-table relational datasets",
         },
         {
           id: "statisfy-gcp-terraform",
@@ -171,13 +231,13 @@ export const resumeData = {
           period: "Jan 2024 - Present",
           tagline: "Canonical adapter architecture for enterprise SaaS ecosystems",
           description:
-            "Architected a scalable connector framework enabling rapid onboarding of enterprise data sources such as Gong, Avoma, Slack, Paragon, Simplesat, Chorus, and external CRMs.",
+            "Architected a scalable connector framework enabling rapid onboarding of enterprise data sources such as Salesforce, HubSpot, Gainsight, Gong, Avoma, Chorus, Recall, Outlook, Gmail, Jira, Freshdesk, and Simplesat.",
           problem:
             "Disparate third-party SaaS vendors use differing authentication mechanisms, payload formats, rate limits, and webhook models.",
           architecture:
-            "Designed an extensible adapter engine that translates external vendor schemas into normalized canonical internal models, backed by distributed rate limiting, webhook verification, and replay buffers.",
+            "Designed an extensible adapter engine that translates external vendor schemas into normalized canonical internal models, backed by webhook verification and per-vendor retry handling.",
           keyPoints: [
-            "Seamlessly integrated connectors for Gong, Avoma, Slack, Paragon, Simplesat, Chorus.",
+            "Integrated connectors for Salesforce, HubSpot, Gainsight, Gong, Avoma, Chorus, Recall, Outlook, Gmail, Jira, Freshdesk, and Simplesat.",
             "Engineered generic communication infrastructure for transactional outbound notifications (Email, Slack, Webhooks).",
             "Designed extendible dynamic widgets platform rendering custom signals across external dashboards.",
           ],
