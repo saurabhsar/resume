@@ -17,10 +17,8 @@ export default function App() {
   // Default to soft warm paper mode (beige/light warm sand)
   const [darkMode, setDarkMode] = useState(false);
   
-  // Expand experiences by default so all projects can be scanned immediately
-  const [expandedCompanyIds, setExpandedCompanyIds] = useState(
-    resumeData.experiences.map(e => e.id)
-  );
+  // Projects stay collapsed until the reader opens a company
+  const [expandedCompanyIds, setExpandedCompanyIds] = useState([]);
   
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedCompany, setSelectedCompany] = useState(null);
