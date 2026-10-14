@@ -662,6 +662,14 @@ export const resumeData = {
 
   education: [
     {
+      institution: "Birla Institute of Technology and Science, Pilani (BITS Pilani) - WILP",
+      degree: "Master of Technology (M.Tech)",
+      field: "Software Systems",
+      period: "2017 - 2019",
+      location: "Pilani, Rajasthan, India",
+      activities: [],
+    },
+    {
       institution: "National Institute of Technology Durgapur (NIT Durgapur)",
       degree: "Bachelor of Technology (B.Tech)",
       field: "Information Technology / Computer Science & Engineering",

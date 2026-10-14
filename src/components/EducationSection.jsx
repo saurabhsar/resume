@@ -78,7 +78,7 @@ export default function EducationSection({ darkMode }) {
                   </div>
                 </div>
 
-                <div>
+                {edu.activities.length > 0 && <div>
                   <h4 className={`text-xs font-mono uppercase tracking-wider font-semibold mb-3 ${
                     darkMode ? 'text-stone-400' : 'text-stone-600'
                   }`}>
@@ -94,7 +94,7 @@ export default function EducationSection({ darkMode }) {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div>}
               </div>
             ))}
           </div>
