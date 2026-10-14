@@ -196,12 +196,11 @@ export const resumeData = {
           problem:
             "Third-party webhook streams arrived in unpredictable, bursty volumes with disparate payloads. Synchronous processing created severe pipeline stalls, rate-limiting violations, and dropped events.",
           architecture:
-            "Architected a decoupled event ingestion layer leveraging Google Cloud Pub/Sub with dead-letter queueing and asynchronous worker pools. Implemented PostgreSQL database schemas with Alembic versioning, composite indexing, and partition pruning to maintain sub-50ms query response times.",
+            "Architected a decoupled event ingestion layer leveraging Google Cloud Pub/Sub with dead-letter queueing and asynchronous worker pools. Implemented PostgreSQL database schemas with Alembic versioning and composite indexing.",
           keyPoints: [
             "Engineered fault-tolerant ingestion pipelines with exponential backoff and automated retry buffers.",
             "Integrated Google Cloud Pub/Sub for resilient asynchronous message processing and event choreography.",
             "Optimized relational database performance through connection pooling, query tuning, and schema evolution via Alembic.",
-            "Authored operational excellence runbooks for zero-downtime maintenance and disaster recovery.",
           ],
           techStack: ["Python", "Google Cloud Pub/Sub", "PostgreSQL", "Alembic", "Docker", "GCP", "REST API"],
           scale: "Continuous streaming ingestion across enterprise accounts",
@@ -218,7 +217,7 @@ export const resumeData = {
           architecture:
             "Authored reusable Terraform modules encapsulating Cloud Run microservices, Cloud SQL database clusters, Pub/Sub messaging topologies, VPC peering, and fine-grained IAM service roles.",
           keyPoints: [
-            "Achieved 100% Infrastructure-as-Code with state locking and zero manual cloud mutations.",
+            "Managed Cloud Run, Pub/Sub and IAM resources as code through reusable Terraform modules.",
             "Automated multi-environment parity deployed through declarative CI/CD pipelines.",
             "Enforced zero-trust security postures and least-privilege IAM service access.",
           ],
