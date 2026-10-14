@@ -666,7 +666,6 @@ export const resumeData = {
       degree: "Master of Technology (M.Tech)",
       field: "Software Systems",
       period: "2017 - 2019",
-      location: "Pilani, Rajasthan, India",
       activities: [],
     },
     {

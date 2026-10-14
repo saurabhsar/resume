@@ -72,10 +72,10 @@ export default function EducationSection({ darkMode }) {
                     <Calendar className="w-3.5 h-3.5 text-amber-700" />
                     <span>{edu.period}</span>
                   </div>
-                  <div className="flex items-center gap-1.5 text-stone-500">
+                  {edu.location && <div className="flex items-center gap-1.5 text-stone-500">
                     <MapPin className="w-3.5 h-3.5 text-amber-700" />
                     <span>{edu.location}</span>
-                  </div>
+                  </div>}
                 </div>
 
                 {edu.activities.length > 0 && <div>
