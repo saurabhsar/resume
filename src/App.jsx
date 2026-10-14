@@ -14,9 +14,10 @@ import Footer from './components/Footer';
 import { resumeData } from './data/resumeData';
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  // Default to soft warm paper mode (beige/light warm sand)
+  const [darkMode, setDarkMode] = useState(false);
   
-  // By default, expand Statisfy & Navi, or expand all for immediate visibility
+  // Expand experiences by default so all projects can be scanned immediately
   const [expandedCompanyIds, setExpandedCompanyIds] = useState(
     resumeData.experiences.map(e => e.id)
   );
@@ -27,13 +28,12 @@ export default function App() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   useEffect(() => {
-    // Apply dark class to html document element
     if (darkMode) {
       document.documentElement.classList.add('dark');
-      document.body.className = "bg-slate-950 text-slate-100 antialiased selection:bg-indigo-500 selection:text-white";
+      document.body.className = "bg-[#141210] text-[#EDE8E1] antialiased selection:bg-amber-900/60 selection:text-amber-100";
     } else {
       document.documentElement.classList.remove('dark');
-      document.body.className = "bg-slate-50 text-slate-900 antialiased selection:bg-indigo-500 selection:text-white";
+      document.body.className = "bg-[#FAF7F2] text-stone-900 antialiased selection:bg-amber-200 selection:text-stone-900";
     }
   }, [darkMode]);
 
@@ -57,7 +57,6 @@ export default function App() {
 
   const handleSelectTech = (tech) => {
     setSelectedTechFilter(tech);
-    // Expand all when filtering so matches are visible
     setExpandedCompanyIds(resumeData.experiences.map(e => e.id));
     const el = document.getElementById('experience');
     el?.scrollIntoView({ behavior: 'smooth' });
@@ -69,7 +68,7 @@ export default function App() {
 
   return (
     <div className={`min-h-screen flex flex-col font-sans transition-colors duration-200 ${
-      darkMode ? 'bg-slate-950 text-slate-100' : 'bg-slate-50 text-slate-900'
+      darkMode ? 'bg-[#141210] text-[#EDE8E1]' : 'bg-[#FAF7F2] text-stone-900'
     }`}>
       
       {/* Navigation Header */}

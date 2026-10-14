@@ -2,7 +2,7 @@ export const resumeData = {
   personal: {
     name: "Saurabh Araiyer",
     title: "Staff Software Engineer & Platform Architect",
-    tagline: "Reason from first principle!",
+    tagline: "Staff Software Engineer & Platform Architect",
     location: "Bengaluru, Karnataka, India",
     email: "saurabh.araiyer@gmail.com",
     linkedin: "https://www.linkedin.com/in/saurabharaiyer",
@@ -10,7 +10,7 @@ export const resumeData = {
     website: "https://saurabh.araiyer.me",
     blog: "http://decapsulatingabstraction.blogspot.com",
     summary:
-      "Staff Software Engineer with 13+ years of experience architecting high-throughput distributed systems, mission-critical financial platforms, and cloud-native data backbones. Proven track record of scaling transactional e-commerce infrastructure to 500,000+ concurrent requests during peak flash sales (Flipkart Big Billion Days), engineering multi-vertical regulated FinTech identity platforms compliant with RBI/IRDAI/SEBI (Navi), and leading foundational event-driven ETL systems on GCP (Statisfy). Driven by first-principles systems design, high-availability data topologies, and operational resilience.",
+      "Staff Software Engineer with 13+ years of experience architecting high-throughput distributed systems, mission-critical financial platforms, and cloud-native data backbones. Proven track record of scaling transactional e-commerce infrastructure to 500,000+ concurrent requests during peak flash sales (Flipkart Big Billion Days), engineering multi-vertical regulated FinTech identity platforms compliant with RBI/IRDAI/SEBI (Navi), and leading foundational event-driven ETL systems on GCP (Statisfy). Focused on high-availability data topologies, low-latency microservices, and operational resilience.",
   },
 
   stats: [

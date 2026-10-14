@@ -97,22 +97,22 @@ export default function ExperienceTimeline({
             <div className="flex items-center gap-2 mb-2">
               <span className={`text-xs font-mono font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md border ${
                 darkMode 
-                  ? 'bg-indigo-950/60 text-indigo-400 border-indigo-800/60' 
-                  : 'bg-indigo-50 text-indigo-700 border-indigo-200'
+                  ? 'bg-amber-950/40 text-amber-300 border-amber-800/50' 
+                  : 'bg-amber-100/70 text-amber-900 border-amber-200/80'
               }`}>
                 Career Journey
               </span>
-              <span className={`text-xs font-mono ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
+              <span className={`text-xs font-mono ${darkMode ? 'text-stone-400' : 'text-stone-600'}`}>
                 Click any role to expand projects
               </span>
             </div>
             <h2 className={`text-3xl sm:text-4xl font-extrabold tracking-tight ${
-              darkMode ? 'text-white' : 'text-slate-900'
+              darkMode ? 'text-[#EDE8E1]' : 'text-stone-900'
             }`}>
               Experience Timeline & Projects
             </h2>
-            <p className={`mt-2 text-base ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-              Over a decade architecting Tier-1 distributed platforms, FinTech regulatory engines, and agentic AI loops.
+            <p className={`mt-2 text-base ${darkMode ? 'text-stone-400' : 'text-stone-600'}`}>
+              Over a decade architecting Tier-1 distributed platforms, FinTech regulatory engines, and event-driven data streaming.
             </p>
           </div>
 
@@ -122,22 +122,22 @@ export default function ExperienceTimeline({
               onClick={handleExpandAll}
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border transition-all ${
                 darkMode 
-                  ? 'bg-slate-900 text-slate-300 border-slate-700 hover:border-indigo-500 hover:text-white' 
-                  : 'bg-slate-100 text-slate-700 border-slate-200 hover:border-indigo-400 hover:bg-white'
+                  ? 'bg-[#1E1B18] text-stone-300 border-[#383129] hover:border-amber-500 hover:text-white' 
+                  : 'bg-[#F2EDE4] text-stone-800 border-[#E0D8CB] hover:border-amber-700 hover:bg-white'
               }`}
             >
-              <Maximize2 className="w-3.5 h-3.5 text-indigo-400" />
+              <Maximize2 className="w-3.5 h-3.5 text-amber-600" />
               <span>Expand All Projects</span>
             </button>
             <button
               onClick={handleCollapseAll}
               className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border transition-all ${
                 darkMode 
-                  ? 'bg-slate-900 text-slate-300 border-slate-700 hover:border-slate-600 hover:text-white' 
-                  : 'bg-slate-100 text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-white'
+                  ? 'bg-[#1E1B18] text-stone-400 border-[#383129] hover:border-stone-500 hover:text-stone-200' 
+                  : 'bg-[#F2EDE4] text-stone-600 border-[#E0D8CB] hover:border-stone-400 hover:bg-white'
               }`}
             >
-              <Minimize2 className="w-3.5 h-3.5 text-slate-400" />
+              <Minimize2 className="w-3.5 h-3.5 text-stone-500" />
               <span>Collapse All</span>
             </button>
           </div>
@@ -146,17 +146,17 @@ export default function ExperienceTimeline({
         {/* Filter & Search Bar */}
         <div className={`p-4 rounded-2xl border mb-10 no-print transition-all ${
           darkMode 
-            ? 'bg-slate-900/60 border-slate-800' 
-            : 'bg-white border-slate-200 shadow-sm'
+            ? 'bg-[#1A1714] border-[#2E2822]' 
+            : 'bg-white border-[#E7E2DA] shadow-xs'
         }`}>
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
             
             {/* Tech filter tags */}
             <div className="flex items-center gap-1.5 overflow-x-auto pb-2 lg:pb-0 scrollbar-none">
               <span className={`text-xs font-mono font-medium mr-1 flex items-center gap-1 ${
-                darkMode ? 'text-slate-400' : 'text-slate-500'
+                darkMode ? 'text-stone-400' : 'text-stone-600'
               }`}>
-                <Filter className="w-3 h-3 text-indigo-400" /> Filter:
+                <Filter className="w-3 h-3 text-amber-700 dark:text-amber-400" /> Filter:
               </span>
               {allTechnologies.map(tech => (
                 <button
@@ -165,11 +165,11 @@ export default function ExperienceTimeline({
                   className={`text-xs font-medium px-3 py-1.5 rounded-lg whitespace-nowrap transition-all ${
                     selectedTechFilter === tech
                       ? darkMode 
-                        ? 'bg-indigo-600 text-white shadow-sm shadow-indigo-600/30' 
-                        : 'bg-indigo-600 text-white shadow-sm'
+                        ? 'bg-amber-600 text-stone-950 font-bold shadow-xs' 
+                        : 'bg-amber-800 text-[#FAF7F2] font-semibold shadow-xs'
                       : darkMode 
-                        ? 'bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white' 
-                        : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                        ? 'bg-[#221D18] text-stone-300 hover:bg-[#2A241F] hover:text-white border border-[#352D24]' 
+                        : 'bg-[#F2ECE1] text-stone-700 hover:bg-[#EAE2D4] border border-[#E0D8CB]'
                   }`}
                 >
                   {tech}
@@ -180,7 +180,7 @@ export default function ExperienceTimeline({
             {/* Quick search input inside timeline */}
             <div className="relative min-w-[220px]">
               <Search className={`w-3.5 h-3.5 absolute left-3 top-1/2 -translate-y-1/2 ${
-                darkMode ? 'text-slate-400' : 'text-slate-500'
+                darkMode ? 'text-stone-400' : 'text-stone-500'
               }`} />
               <input
                 type="text"
@@ -189,14 +189,14 @@ export default function ExperienceTimeline({
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className={`w-full text-xs rounded-xl pl-9 pr-3 py-2 border transition-colors outline-none ${
                   darkMode 
-                    ? 'bg-slate-950/80 border-slate-700 text-slate-200 placeholder-slate-500 focus:border-indigo-500' 
-                    : 'bg-slate-50 border-slate-200 text-slate-800 placeholder-slate-400 focus:border-indigo-600'
+                    ? 'bg-[#141210] border-[#383129] text-stone-200 placeholder-stone-500 focus:border-amber-600' 
+                    : 'bg-[#FAF7F2] border-[#E0D8CB] text-stone-800 placeholder-stone-400 focus:border-amber-700'
                 }`}
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-slate-400 hover:text-white"
+                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-xs text-stone-400 hover:text-stone-200"
                 >
                   ×
                 </button>
@@ -206,8 +206,8 @@ export default function ExperienceTimeline({
           </div>
 
           {(selectedTechFilter !== 'All' || searchQuery) && (
-            <div className="mt-3 pt-3 border-t border-slate-800/60 flex items-center justify-between text-xs">
-              <span className={darkMode ? 'text-indigo-400' : 'text-indigo-600'}>
+            <div className="mt-3 pt-3 border-t border-[#E7E2DA] dark:border-[#2E2822] flex items-center justify-between text-xs">
+              <span className={darkMode ? 'text-amber-400' : 'text-amber-800'}>
                 Showing results for {selectedTechFilter !== 'All' ? `tech "${selectedTechFilter}"` : ''} 
                 {selectedTechFilter !== 'All' && searchQuery ? ' and ' : ''}
                 {searchQuery ? `query "${searchQuery}"` : ''}
@@ -217,7 +217,7 @@ export default function ExperienceTimeline({
                   setSelectedTechFilter('All');
                   setSearchQuery('');
                 }}
-                className="underline hover:no-underline text-slate-400 hover:text-slate-200"
+                className="underline hover:no-underline text-stone-500 hover:text-stone-700 dark:hover:text-stone-300"
               >
                 Reset filter
               </button>
@@ -226,41 +226,33 @@ export default function ExperienceTimeline({
         </div>
 
         {/* Timeline Container */}
-        <div className="relative border-l-2 border-indigo-500/30 ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-12">
+        <div className="relative border-l-2 border-[#D9D0C1] dark:border-[#332C24] ml-4 sm:ml-8 pl-6 sm:pl-10 space-y-12">
           
-          {filteredExperiences.map((exp, index) => {
+          {filteredExperiences.map((exp) => {
             const isExpanded = expandedCompanyIds.includes(exp.id);
             const projectCount = exp.displayProjects.length;
 
-            // Brand accent styling mapping
+            // Warm theme styling mapping
             const accentColors = {
               indigo: {
-                border: 'hover:border-indigo-500/60',
-                badgeBg: 'bg-indigo-600',
-                ring: 'ring-indigo-500/30',
-                glow: 'shadow-indigo-500/10',
-                text: 'text-indigo-400',
+                border: 'hover:border-amber-600/70',
+                badgeBg: 'bg-amber-800',
+                text: 'text-amber-800 dark:text-amber-400',
               },
               emerald: {
-                border: 'hover:border-emerald-500/60',
-                badgeBg: 'bg-emerald-600',
-                ring: 'ring-emerald-500/30',
-                glow: 'shadow-emerald-500/10',
-                text: 'text-emerald-400',
+                border: 'hover:border-emerald-700/70',
+                badgeBg: 'bg-emerald-800',
+                text: 'text-emerald-800 dark:text-emerald-400',
               },
               blue: {
-                border: 'hover:border-blue-500/60',
-                badgeBg: 'bg-blue-600',
-                ring: 'ring-blue-500/30',
-                glow: 'shadow-blue-500/10',
-                text: 'text-blue-400',
+                border: 'hover:border-stone-600/70',
+                badgeBg: 'bg-stone-800',
+                text: 'text-stone-800 dark:text-stone-300',
               },
               cyan: {
-                border: 'hover:border-cyan-500/60',
-                badgeBg: 'bg-cyan-600',
-                ring: 'ring-cyan-500/30',
-                glow: 'shadow-cyan-500/10',
-                text: 'text-cyan-400',
+                border: 'hover:border-amber-700/70',
+                badgeBg: 'bg-amber-900',
+                text: 'text-amber-900 dark:text-amber-400',
               },
             };
 
@@ -273,8 +265,8 @@ export default function ExperienceTimeline({
               >
                 {/* Timeline node icon */}
                 <div 
-                  className={`absolute -left-[37px] sm:-left-[53px] top-6 w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm text-white shadow-lg ring-4 transition-transform group-hover:scale-110 ${theme.badgeBg} ${
-                    darkMode ? 'ring-slate-950' : 'ring-slate-100'
+                  className={`absolute -left-[37px] sm:-left-[53px] top-6 w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center font-bold text-xs sm:text-sm text-[#FAF7F2] shadow-md ring-4 transition-transform group-hover:scale-110 ${theme.badgeBg} ${
+                    darkMode ? 'ring-[#141210]' : 'ring-[#FAF7F2]'
                   }`}
                 >
                   {exp.logoBadge}
@@ -284,8 +276,8 @@ export default function ExperienceTimeline({
                 <div 
                   className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
                     darkMode 
-                      ? `bg-slate-900/70 border-slate-800 ${theme.border} shadow-lg ${theme.glow}` 
-                      : `bg-white border-slate-200/90 ${theme.border} shadow-md`
+                      ? `bg-[#1A1714] border-[#2E2822] ${theme.border} shadow-lg` 
+                      : `bg-white border-[#E7E2DA] ${theme.border} shadow-xs`
                   }`}
                 >
                   
@@ -300,31 +292,31 @@ export default function ExperienceTimeline({
                       <div>
                         <div className="flex flex-wrap items-center gap-2 mb-1">
                           <h3 className={`text-xl sm:text-2xl font-bold tracking-tight ${
-                            darkMode ? 'text-white' : 'text-slate-900'
+                            darkMode ? 'text-[#EDE8E1]' : 'text-stone-900'
                           }`}>
                             {exp.role}
                           </h3>
                           <span className={`text-xs font-mono font-semibold px-2.5 py-0.5 rounded-full border ${
                             darkMode 
-                              ? 'bg-slate-800 text-slate-300 border-slate-700' 
-                              : 'bg-slate-100 text-slate-700 border-slate-200'
+                              ? 'bg-[#241F1A] text-stone-300 border-[#383129]' 
+                              : 'bg-[#F2ECE1] text-stone-800 border-[#DED4C3]'
                           }`}>
                             {exp.company}
                           </span>
                         </div>
-                        <p className={`text-xs font-medium ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
+                        <p className={`text-xs font-medium ${darkMode ? 'text-stone-400' : 'text-stone-600'}`}>
                           {exp.companyType}
                         </p>
                       </div>
 
                       {/* Period, Location & Accordion Trigger Pill */}
                       <div className="flex flex-wrap sm:flex-col sm:items-end gap-2 text-xs">
-                        <div className="flex items-center gap-1.5 font-mono font-medium px-2.5 py-1 rounded-md bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                        <div className="flex items-center gap-1.5 font-mono font-medium px-2.5 py-1 rounded-md bg-amber-100/70 dark:bg-amber-950/40 text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-800/40">
                           <Calendar className="w-3.5 h-3.5" />
                           <span>{exp.period}</span>
                         </div>
-                        <div className={`flex items-center gap-1 ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
-                          <MapPin className="w-3 h-3 text-rose-400" />
+                        <div className={`flex items-center gap-1 ${darkMode ? 'text-stone-400' : 'text-stone-600'}`}>
+                          <MapPin className="w-3 h-3 text-amber-700" />
                           <span>{exp.location}</span>
                         </div>
                       </div>
@@ -333,7 +325,7 @@ export default function ExperienceTimeline({
 
                     {/* Summary text */}
                     <p className={`text-sm leading-relaxed mb-4 ${
-                      darkMode ? 'text-slate-300' : 'text-slate-600'
+                      darkMode ? 'text-stone-300' : 'text-stone-700'
                     }`}>
                       {exp.summary}
                     </p>
@@ -343,7 +335,7 @@ export default function ExperienceTimeline({
                       {exp.highlights.map((h, i) => (
                         <div key={i} className="flex items-start gap-2 text-xs">
                           <CheckCircle2 className={`w-3.5 h-3.5 mt-0.5 shrink-0 ${theme.text}`} />
-                          <span className={darkMode ? 'text-slate-300' : 'text-slate-700'}>
+                          <span className={darkMode ? 'text-stone-300' : 'text-stone-700'}>
                             {h}
                           </span>
                         </div>
@@ -352,16 +344,16 @@ export default function ExperienceTimeline({
 
                     {/* Interactive Accordion Action Strip */}
                     <div className={`pt-4 border-t flex items-center justify-between transition-colors ${
-                      darkMode ? 'border-slate-800' : 'border-slate-100'
+                      darkMode ? 'border-[#2E2822]' : 'border-[#F0EBE2]'
                     }`}>
                       <div className="flex items-center gap-2">
                         <span className={`inline-flex items-center gap-1.5 text-xs font-mono font-medium px-2.5 py-1 rounded-lg ${
-                          darkMode ? 'bg-slate-800 text-slate-200' : 'bg-slate-100 text-slate-800'
+                          darkMode ? 'bg-[#25201B] text-stone-200' : 'bg-[#F2ECE1] text-stone-800'
                         }`}>
-                          <Layers className="w-3.5 h-3.5 text-indigo-400" />
+                          <Layers className="w-3.5 h-3.5 text-amber-700 dark:text-amber-400" />
                           <span>{projectCount} {projectCount === 1 ? 'Project' : 'Projects'}</span>
                         </span>
-                        <span className={`text-[11px] hidden sm:inline ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
+                        <span className={`text-[11px] hidden sm:inline ${darkMode ? 'text-stone-400' : 'text-stone-500'}`}>
                           {isExpanded ? 'Click to collapse projects' : 'Click to expand all project details'}
                         </span>
                       </div>
@@ -386,23 +378,23 @@ export default function ExperienceTimeline({
                         : 'max-h-0 opacity-0 overflow-hidden'
                     } print-expand`}
                   >
-                    <div className={`p-6 sm:p-7 pt-2 border-t ${
+                    <div className={`p-6 sm:p-7 pt-3 border-t ${
                       darkMode 
-                        ? 'bg-slate-950/60 border-slate-800/80' 
-                        : 'bg-slate-50/80 border-slate-200/80'
+                        ? 'bg-[#141210] border-[#2E2822]' 
+                        : 'bg-[#FAF7F2] border-[#E7E2DA]'
                     }`}>
                       
                       <div className="flex items-center justify-between mb-6">
                         <div className="flex items-center gap-2">
-                          <Cpu className="w-4 h-4 text-indigo-400" />
+                          <Cpu className="w-4 h-4 text-amber-700 dark:text-amber-400" />
                           <h4 className={`text-xs font-mono uppercase tracking-wider font-bold ${
-                            darkMode ? 'text-slate-300' : 'text-slate-700'
+                            darkMode ? 'text-stone-300' : 'text-stone-700'
                           }`}>
                             Key Engineering Projects at {exp.company}
                           </h4>
                         </div>
-                        <span className={`text-[11px] font-mono ${darkMode ? 'text-slate-500' : 'text-slate-400'}`}>
-                          Detailed Architecture & Impact
+                        <span className={`text-[11px] font-mono ${darkMode ? 'text-stone-500' : 'text-stone-500'}`}>
+                          Architecture & Impact Breakdown
                         </span>
                       </div>
 
@@ -413,40 +405,46 @@ export default function ExperienceTimeline({
                             key={project.id}
                             className={`p-5 sm:p-6 rounded-xl border transition-all duration-200 group/proj ${
                               darkMode 
-                                ? 'bg-slate-900/90 border-slate-800 hover:border-indigo-500/50 hover:bg-slate-900 shadow-md' 
-                                : 'bg-white border-slate-200 hover:border-indigo-400 shadow-sm'
+                                ? 'bg-[#1C1815] border-[#2E2822] hover:border-amber-600/50 shadow-md' 
+                                : 'bg-white border-[#E7E2DA] hover:border-amber-700 shadow-xs'
                             }`}
                           >
                             
                             {/* Project Header */}
                             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 mb-3">
                               <div>
-                                <h5 className={`text-base sm:text-lg font-bold tracking-tight group-hover/proj:text-indigo-400 transition-colors ${
-                                  darkMode ? 'text-white' : 'text-slate-900'
+                                <h5 className={`text-base sm:text-lg font-bold tracking-tight group-hover/proj:text-amber-800 dark:group-hover/proj:text-amber-300 transition-colors ${
+                                  darkMode ? 'text-[#EDE8E1]' : 'text-stone-900'
                                 }`}>
                                   {project.name}
                                 </h5>
                                 <p className={`text-xs font-medium mt-0.5 ${
-                                  darkMode ? 'text-indigo-300' : 'text-indigo-700'
+                                  darkMode ? 'text-amber-300' : 'text-amber-900'
                                 }`}>
                                   {project.tagline}
                                 </p>
                               </div>
-                              <span className="self-start text-[11px] font-mono px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700 whitespace-nowrap">
+                              <span className={`self-start text-[11px] font-mono px-2 py-0.5 rounded border whitespace-nowrap ${
+                                darkMode 
+                                  ? 'bg-[#26201B] text-stone-300 border-[#383025]' 
+                                  : 'bg-[#F2ECE1] text-stone-800 border-[#DED4C3]'
+                              }`}>
                                 {project.period}
                               </span>
                             </div>
 
                             {/* Problem & Architecture Breakdown */}
-                            <div className={`p-3.5 rounded-lg text-xs leading-relaxed mb-4 ${
-                              darkMode ? 'bg-slate-950/70 text-slate-300' : 'bg-slate-100/80 text-slate-700'
+                            <div className={`p-4 rounded-xl text-xs leading-relaxed mb-4 border ${
+                              darkMode 
+                                ? 'bg-[#151210] border-[#2E2822] text-stone-300' 
+                                : 'bg-[#F7F3EB] border-[#E8E1D5] text-stone-700'
                             }`}>
                               <p className="mb-2">
-                                <strong className="text-rose-400 font-semibold font-mono">Problem: </strong>
+                                <strong className="text-amber-800 dark:text-amber-400 font-semibold font-mono">Problem: </strong>
                                 {project.problem}
                               </p>
                               <p>
-                                <strong className="text-emerald-400 font-semibold font-mono">Architecture: </strong>
+                                <strong className="text-emerald-800 dark:text-emerald-400 font-semibold font-mono">Architecture: </strong>
                                 {project.architecture}
                               </p>
                             </div>
@@ -455,8 +453,8 @@ export default function ExperienceTimeline({
                             <ul className="space-y-1.5 mb-4">
                               {project.keyPoints.map((pt, i) => (
                                 <li key={i} className="flex items-start gap-2 text-xs">
-                                  <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 mt-1.5 shrink-0" />
-                                  <span className={darkMode ? 'text-slate-300' : 'text-slate-600'}>
+                                  <span className="w-1.5 h-1.5 rounded-full bg-amber-700 dark:bg-amber-400 mt-1.5 shrink-0" />
+                                  <span className={darkMode ? 'text-stone-300' : 'text-stone-700'}>
                                     {pt}
                                   </span>
                                 </li>
@@ -464,7 +462,9 @@ export default function ExperienceTimeline({
                             </ul>
 
                             {/* Scale Badge & Tech Chips Footer */}
-                            <div className="pt-3 border-t border-slate-800/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div className={`pt-3 border-t flex flex-col sm:flex-row sm:items-center justify-between gap-3 ${
+                              darkMode ? 'border-[#2E2822]' : 'border-[#F0EBE2]'
+                            }`}>
                               
                               {/* Tech Stack Pills */}
                               <div className="flex flex-wrap items-center gap-1.5">
@@ -474,10 +474,10 @@ export default function ExperienceTimeline({
                                     onClick={() => setSelectedTechFilter(tech)}
                                     className={`text-[10px] font-mono px-2 py-0.5 rounded transition-colors ${
                                       selectedTechFilter === tech
-                                        ? 'bg-indigo-600 text-white font-semibold'
+                                        ? 'bg-amber-800 text-white font-semibold'
                                         : darkMode 
-                                          ? 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white' 
-                                          : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                                          ? 'bg-[#25201B] text-stone-300 hover:bg-[#302A24] hover:text-white border border-[#3A3228]' 
+                                          : 'bg-[#F2ECE1] text-stone-800 hover:bg-[#EAE2D4] border border-[#E0D8CB]'
                                     }`}
                                     title={`Filter by ${tech}`}
                                   >
@@ -488,12 +488,12 @@ export default function ExperienceTimeline({
 
                               {/* Scale badge & Deep Dive trigger */}
                               <div className="flex items-center gap-2 self-end sm:self-auto">
-                                <span className="text-[11px] font-mono font-medium text-emerald-400 bg-emerald-950/40 border border-emerald-800/40 px-2 py-0.5 rounded">
+                                <span className="text-[11px] font-mono font-medium text-amber-900 dark:text-amber-300 bg-amber-100/70 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800/40 px-2 py-0.5 rounded">
                                   {project.scale}
                                 </span>
                                 <button
                                   onClick={() => onSelectProject(project, exp)}
-                                  className="no-print inline-flex items-center gap-1 text-[11px] font-semibold text-indigo-400 hover:text-indigo-300 ml-1"
+                                  className="no-print inline-flex items-center gap-1 text-[11px] font-semibold text-amber-800 dark:text-amber-400 hover:underline ml-1"
                                 >
                                   <span>Deep Dive</span>
                                   <ArrowUpRight className="w-3.5 h-3.5" />

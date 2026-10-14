@@ -17,24 +17,24 @@ export default function Footer({ darkMode }) {
   return (
     <footer className={`py-12 border-t transition-colors ${
       darkMode 
-        ? 'bg-slate-950 border-slate-800/80 text-slate-400' 
-        : 'bg-slate-50 border-slate-200 text-slate-600'
+        ? 'bg-[#141210] border-[#2E2822] text-stone-400' 
+        : 'bg-[#F5F0E8] border-[#E5DECةD] text-stone-600'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-800/60">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#E0D8CB] dark:border-[#2E2822]">
           
           <div>
             <div className="flex items-center gap-2 mb-1">
-              <span className={`text-base font-bold ${darkMode ? 'text-white' : 'text-slate-900'}`}>
+              <span className={`text-base font-bold ${darkMode ? 'text-[#EDE8E1]' : 'text-stone-900'}`}>
                 {resumeData.personal.name}
               </span>
-              <span className="text-xs font-mono text-indigo-400">
-                — {resumeData.personal.tagline}
+              <span className="text-xs font-mono text-amber-800 dark:text-amber-400">
+                — {resumeData.personal.title}
               </span>
             </div>
-            <p className="text-xs">
-              Staff Software Engineer & Engineering Leader • Bengaluru, India
+            <p className="text-xs text-stone-500">
+              Staff Software Engineer & Platform Architect • {resumeData.personal.location}
             </p>
           </div>
 
@@ -46,8 +46,8 @@ export default function Footer({ darkMode }) {
               rel="noopener noreferrer"
               className={`p-2.5 rounded-xl border transition-all ${
                 darkMode 
-                  ? 'bg-slate-900 border-slate-800 hover:border-blue-500 hover:text-blue-400' 
-                  : 'bg-white border-slate-200 hover:border-blue-400 hover:text-blue-600'
+                  ? 'bg-[#1E1B18] border-[#383129] hover:border-amber-600 hover:text-amber-400' 
+                  : 'bg-white border-[#E0D8CB] hover:border-amber-700 hover:text-amber-900'
               }`}
               title="LinkedIn"
             >
@@ -60,8 +60,8 @@ export default function Footer({ darkMode }) {
               rel="noopener noreferrer"
               className={`p-2.5 rounded-xl border transition-all ${
                 darkMode 
-                  ? 'bg-slate-900 border-slate-800 hover:border-purple-500 hover:text-purple-400' 
-                  : 'bg-white border-slate-200 hover:border-purple-400 hover:text-purple-600'
+                  ? 'bg-[#1E1B18] border-[#383129] hover:border-stone-500 hover:text-white' 
+                  : 'bg-white border-[#E0D8CB] hover:border-stone-500 hover:text-stone-900'
               }`}
               title="GitHub"
             >
@@ -74,8 +74,8 @@ export default function Footer({ darkMode }) {
               rel="noopener noreferrer"
               className={`p-2.5 rounded-xl border transition-all ${
                 darkMode 
-                  ? 'bg-slate-900 border-slate-800 hover:border-amber-500 hover:text-amber-400' 
-                  : 'bg-white border-slate-200 hover:border-amber-400 hover:text-amber-600'
+                  ? 'bg-[#1E1B18] border-[#383129] hover:border-amber-500 hover:text-amber-400' 
+                  : 'bg-white border-[#E0D8CB] hover:border-amber-600 hover:text-amber-800'
               }`}
               title="Technical Blog"
             >
@@ -86,8 +86,8 @@ export default function Footer({ darkMode }) {
               onClick={scrollToTop}
               className={`p-2.5 rounded-xl border transition-all ${
                 darkMode 
-                  ? 'bg-slate-900 border-slate-800 hover:border-indigo-500 hover:text-white' 
-                  : 'bg-white border-slate-200 hover:border-indigo-400 hover:text-slate-900'
+                  ? 'bg-[#1E1B18] border-[#383129] hover:border-amber-500 hover:text-white' 
+                  : 'bg-white border-[#E0D8CB] hover:border-amber-700 hover:text-stone-900'
               }`}
               title="Back to Top"
             >
@@ -97,9 +97,9 @@ export default function Footer({ darkMode }) {
 
         </div>
 
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-          <p>© {new Date().getFullYear()} {resumeData.personal.name}. Built with Vite, React & Tailwind CSS.</p>
-          <p className="font-mono text-[11px] text-slate-500">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-stone-500">
+          <p>© {new Date().getFullYear()} {resumeData.personal.name}. Built with React, Vite & Tailwind CSS.</p>
+          <p className="font-mono text-[11px]">
             Optimized for Vercel deployment & PDF printing.
           </p>
         </div>

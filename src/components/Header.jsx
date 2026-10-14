@@ -31,7 +31,6 @@ export default function Header({
   }, []);
 
   const handlePrint = () => {
-    // Ensure all experiences are expanded before printing
     if (onExpandAllExperience) {
       onExpandAllExperience();
     }
@@ -54,11 +53,9 @@ export default function Header({
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 no-print ${
         scrolled 
           ? darkMode 
-            ? 'bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80 shadow-lg shadow-black/20 py-3' 
-            : 'bg-white/85 backdrop-blur-md border-b border-slate-200/80 shadow-md shadow-slate-200/30 py-3'
-          : darkMode 
-            ? 'bg-transparent py-5' 
-            : 'bg-transparent py-5'
+            ? 'bg-[#141210]/90 backdrop-blur-md border-b border-[#2E2822] shadow-lg shadow-black/30 py-3' 
+            : 'bg-[#FAF7F2]/90 backdrop-blur-md border-b border-[#E7E2DA] shadow-sm py-3'
+          : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,30 +63,30 @@ export default function Header({
           
           {/* Logo / Personal Monogram */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-lg transition-transform duration-300 group-hover:scale-105 shadow-md ${
+            <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-sm tracking-tight transition-transform duration-300 group-hover:scale-105 shadow-sm ${
               darkMode 
-                ? 'bg-gradient-to-br from-indigo-500 via-purple-600 to-cyan-500 text-white shadow-indigo-500/20' 
-                : 'bg-gradient-to-br from-indigo-600 to-blue-700 text-white shadow-indigo-600/25'
+                ? 'bg-amber-600 text-amber-50 shadow-amber-900/30' 
+                : 'bg-amber-700 text-[#FAF7F2] shadow-amber-900/15'
             }`}>
               SA
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <span className={`font-bold tracking-tight text-base sm:text-lg transition-colors ${
-                  darkMode ? 'text-white group-hover:text-indigo-400' : 'text-slate-900 group-hover:text-indigo-600'
+                  darkMode ? 'text-[#EDE8E1] group-hover:text-amber-400' : 'text-stone-900 group-hover:text-amber-800'
                 }`}>
                   {resumeData.personal.name}
                 </span>
                 <span className={`hidden sm:inline-flex text-[11px] font-mono font-medium px-2 py-0.5 rounded-full border ${
                   darkMode 
-                    ? 'bg-indigo-950/60 text-indigo-300 border-indigo-800/60' 
-                    : 'bg-indigo-50 text-indigo-700 border-indigo-200'
+                    ? 'bg-amber-950/40 text-amber-300 border-amber-800/50' 
+                    : 'bg-amber-100/70 text-amber-900 border-amber-200/80'
                 }`}>
                   Staff Engineer
                 </span>
               </div>
-              <p className={`text-xs font-mono hidden md:block ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
-                {resumeData.personal.tagline}
+              <p className={`text-xs font-mono hidden md:block ${darkMode ? 'text-stone-400' : 'text-stone-600'}`}>
+                {resumeData.personal.location}
               </p>
             </div>
           </a>
@@ -102,8 +99,8 @@ export default function Header({
                 href={link.href}
                 className={`px-3 py-1.5 text-sm font-medium rounded-lg transition-all duration-200 ${
                   darkMode 
-                    ? 'text-slate-300 hover:text-white hover:bg-slate-800/60' 
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
+                    ? 'text-stone-300 hover:text-white hover:bg-[#25201C]' 
+                    : 'text-stone-700 hover:text-stone-900 hover:bg-[#EFEAE2]'
                 }`}
               >
                 {link.name}
@@ -119,15 +116,15 @@ export default function Header({
               onClick={onOpenSearch}
               className={`flex items-center gap-2 px-3 py-1.5 text-xs font-medium rounded-lg border transition-all ${
                 darkMode 
-                  ? 'bg-slate-900/80 text-slate-300 border-slate-700/80 hover:border-indigo-500/80 hover:bg-slate-800' 
-                  : 'bg-slate-100 text-slate-700 border-slate-200 hover:border-indigo-400 hover:bg-white'
+                  ? 'bg-[#1E1B18] text-stone-300 border-[#383129] hover:border-amber-600 hover:bg-[#282420]' 
+                  : 'bg-[#F2EDE4] text-stone-800 border-[#E0D8CB] hover:border-amber-600 hover:bg-white'
               }`}
               title="Quick Search (Ctrl/Cmd + K)"
             >
-              <Search className="w-3.5 h-3.5 text-indigo-400" />
+              <Search className="w-3.5 h-3.5 text-amber-600" />
               <span className="hidden sm:inline">Search</span>
               <kbd className={`hidden sm:inline-block text-[10px] font-mono px-1.5 py-0.5 rounded border ${
-                darkMode ? 'bg-slate-800 border-slate-700 text-slate-400' : 'bg-slate-200 border-slate-300 text-slate-600'
+                darkMode ? 'bg-[#29231D] border-[#3E362D] text-stone-400' : 'bg-[#E7E0D3] border-[#D9D0C1] text-stone-700'
               }`}>
                 ⌘K
               </kbd>
@@ -138,12 +135,12 @@ export default function Header({
               onClick={handlePrint}
               className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border transition-all ${
                 darkMode 
-                  ? 'bg-slate-900/80 text-slate-300 border-slate-700/80 hover:border-emerald-500/80 hover:text-white' 
-                  : 'bg-slate-100 text-slate-700 border-slate-200 hover:border-emerald-500 hover:bg-white'
+                  ? 'bg-[#1E1B18] text-stone-300 border-[#383129] hover:border-amber-500 hover:text-white' 
+                  : 'bg-[#F2EDE4] text-stone-800 border-[#E0D8CB] hover:border-amber-600 hover:bg-white'
               }`}
               title="Print or Save as PDF"
             >
-              <Printer className="w-3.5 h-3.5 text-emerald-400" />
+              <Printer className="w-3.5 h-3.5 text-stone-600" />
               <span className="hidden md:inline">Print / PDF</span>
             </button>
 
@@ -154,8 +151,8 @@ export default function Header({
               rel="noopener noreferrer"
               className={`p-2 rounded-lg border transition-all ${
                 darkMode 
-                  ? 'text-slate-300 border-slate-800 hover:border-blue-500/80 hover:text-blue-400 hover:bg-slate-900' 
-                  : 'text-slate-600 border-slate-200 hover:border-blue-400 hover:text-blue-600 hover:bg-slate-100'
+                  ? 'text-stone-300 border-[#383129] hover:border-amber-500 hover:text-amber-400 hover:bg-[#201C18]' 
+                  : 'text-stone-700 border-[#E0D8CB] hover:border-amber-600 hover:text-amber-800 hover:bg-[#EFEAE2]'
               }`}
               title="LinkedIn Profile"
             >
@@ -167,10 +164,10 @@ export default function Header({
               onClick={() => setDarkMode(!darkMode)}
               className={`p-2 rounded-lg border transition-all ${
                 darkMode 
-                  ? 'text-amber-400 border-slate-800 hover:bg-slate-900 hover:border-amber-400/50' 
-                  : 'text-indigo-600 border-slate-200 hover:bg-slate-100 hover:border-indigo-400'
+                  ? 'text-amber-400 border-[#383129] hover:bg-[#25201C] hover:border-amber-400/50' 
+                  : 'text-amber-800 border-[#E0D8CB] hover:bg-[#EFEAE2] hover:border-amber-600'
               }`}
-              title={darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+              title={darkMode ? "Switch to Warm Paper Mode" : "Switch to Warm Charcoal Mode"}
             >
               {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
             </button>
@@ -180,8 +177,8 @@ export default function Header({
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className={`lg:hidden p-2 rounded-lg border transition-all ${
                 darkMode 
-                  ? 'text-slate-300 border-slate-800 hover:bg-slate-900' 
-                  : 'text-slate-700 border-slate-200 hover:bg-slate-100'
+                  ? 'text-stone-300 border-[#383129] hover:bg-[#201C18]' 
+                  : 'text-stone-700 border-[#E0D8CB] hover:bg-[#EFEAE2]'
               }`}
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -194,8 +191,8 @@ export default function Header({
         {mobileMenuOpen && (
           <div className={`lg:hidden mt-3 p-4 rounded-2xl border shadow-xl transition-all ${
             darkMode 
-              ? 'bg-slate-900/95 border-slate-800 text-slate-200' 
-              : 'bg-white/95 border-slate-200 text-slate-800'
+              ? 'bg-[#1C1916]/95 border-[#383129] text-stone-200' 
+              : 'bg-[#FAF7F2]/95 border-[#E7E2DA] text-stone-900'
           }`}>
             <div className="grid grid-cols-2 gap-2 mb-3">
               {navLinks.map((link) => (
@@ -204,19 +201,19 @@ export default function Header({
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`px-3 py-2 text-sm font-medium rounded-lg ${
-                    darkMode ? 'hover:bg-slate-800 text-slate-300' : 'hover:bg-slate-100 text-slate-700'
+                    darkMode ? 'hover:bg-[#2A241F] text-stone-300' : 'hover:bg-[#EFEAE2] text-stone-800'
                   }`}
                 >
                   {link.name}
                 </a>
               ))}
             </div>
-            <div className="pt-3 border-t border-slate-700/50 flex items-center justify-between">
+            <div className="pt-3 border-t border-[#383129]/50 flex items-center justify-between">
               <a
                 href={resumeData.personal.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-xs font-medium text-blue-400"
+                className="flex items-center gap-2 text-xs font-medium text-amber-700"
               >
                 <Linkedin className="w-3.5 h-3.5" /> LinkedIn
               </a>
@@ -224,13 +221,13 @@ export default function Header({
                 href={resumeData.personal.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-xs font-medium text-slate-400"
+                className="flex items-center gap-2 text-xs font-medium text-stone-600"
               >
                 <Github className="w-3.5 h-3.5" /> GitHub
               </a>
               <button
                 onClick={handlePrint}
-                className="flex items-center gap-2 text-xs font-medium text-emerald-400"
+                className="flex items-center gap-2 text-xs font-medium text-stone-700"
               >
                 <Printer className="w-3.5 h-3.5" /> Print PDF
               </button>

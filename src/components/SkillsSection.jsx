@@ -31,7 +31,7 @@ export default function SkillsSection({ darkMode, onSelectSkillFilter }) {
     : resumeData.skillsCategories.filter(c => c.category === activeCategory);
 
   return (
-    <section id="skills" className="py-20 relative border-t border-slate-800/60">
+    <section id="skills" className="py-20 relative border-t border-[#E7E2DA] dark:border-[#2E2822]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -39,18 +39,18 @@ export default function SkillsSection({ darkMode, onSelectSkillFilter }) {
           <div className="flex items-center gap-2 mb-2">
             <span className={`text-xs font-mono font-semibold uppercase tracking-wider px-2.5 py-1 rounded-md border ${
               darkMode 
-                ? 'bg-purple-950/60 text-purple-400 border-purple-800/60' 
-                : 'bg-purple-50 text-purple-700 border-purple-200'
+                ? 'bg-amber-950/40 text-amber-300 border-amber-800/50' 
+                : 'bg-amber-100/70 text-amber-900 border-amber-200/80'
             }`}>
               Technical Expertise
             </span>
           </div>
           <h2 className={`text-3xl sm:text-4xl font-extrabold tracking-tight ${
-            darkMode ? 'text-white' : 'text-slate-900'
+            darkMode ? 'text-[#EDE8E1]' : 'text-stone-900'
           }`}>
             Core Competencies & Stack Matrix
           </h2>
-          <p className={`mt-2 text-base ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+          <p className={`mt-2 text-base ${darkMode ? 'text-stone-400' : 'text-stone-600'}`}>
             Mastery across distributed systems, low-latency caches, transactional consistency, and cloud-native infrastructure.
           </p>
         </div>
@@ -64,11 +64,11 @@ export default function SkillsSection({ darkMode, onSelectSkillFilter }) {
               className={`text-xs font-medium px-3.5 py-2 rounded-xl whitespace-nowrap transition-all ${
                 activeCategory === cat
                   ? darkMode 
-                    ? 'bg-purple-600 text-white shadow-md shadow-purple-600/30' 
-                    : 'bg-purple-600 text-white shadow-md'
+                    ? 'bg-amber-600 text-stone-950 font-bold shadow-xs' 
+                    : 'bg-amber-800 text-[#FAF7F2] font-semibold shadow-xs'
                   : darkMode 
-                    ? 'bg-slate-900 text-slate-300 border border-slate-800 hover:border-slate-700 hover:text-white' 
-                    : 'bg-slate-100 text-slate-700 border border-slate-200 hover:bg-slate-200'
+                    ? 'bg-[#1E1B18] text-stone-300 border border-[#383129] hover:border-amber-600 hover:text-white' 
+                    : 'bg-[#F2ECE1] text-stone-700 border border-[#E0D8CB] hover:bg-[#EAE2D4]'
               }`}
             >
               {cat}
@@ -85,27 +85,27 @@ export default function SkillsSection({ darkMode, onSelectSkillFilter }) {
                 key={catGroup.category}
                 className={`p-6 rounded-2xl border transition-all duration-300 group ${
                   darkMode 
-                    ? 'bg-slate-900/60 border-slate-800/90 hover:border-purple-500/40 hover:bg-slate-900/90 shadow-lg' 
-                    : 'bg-white border-slate-200/90 hover:border-purple-400 shadow-md'
+                    ? 'bg-[#1A1714] border-[#2E2822] hover:border-amber-600/50 shadow-md' 
+                    : 'bg-white border-[#E7E2DA] hover:border-amber-700 shadow-xs'
                 }`}
               >
                 {/* Category Header */}
                 <div className="flex items-center gap-3 mb-3">
                   <div className={`p-2.5 rounded-xl ${
-                    darkMode ? 'bg-purple-950/60 text-purple-400' : 'bg-purple-50 text-purple-600'
+                    darkMode ? 'bg-[#25201B] text-amber-400' : 'bg-[#F4EFE6] text-amber-800'
                   }`}>
                     <Icon className="w-5 h-5" />
                   </div>
                   <div>
                     <h3 className={`text-base font-bold tracking-tight ${
-                      darkMode ? 'text-white' : 'text-slate-900'
+                      darkMode ? 'text-[#EDE8E1]' : 'text-stone-900'
                     }`}>
                       {catGroup.category}
                     </h3>
                   </div>
                 </div>
 
-                <p className={`text-xs mb-5 ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
+                <p className={`text-xs mb-5 ${darkMode ? 'text-stone-400' : 'text-stone-600'}`}>
                   {catGroup.description}
                 </p>
 
@@ -114,20 +114,18 @@ export default function SkillsSection({ darkMode, onSelectSkillFilter }) {
                   {catGroup.skills.map((skill) => (
                     <div 
                       key={skill.name}
-                      className={`p-3 rounded-xl border transition-colors ${
-                        darkMode ? 'bg-slate-950/50 border-slate-800/60' : 'bg-slate-50/70 border-slate-200/60'
+                      className={`p-3.5 rounded-xl border transition-colors ${
+                        darkMode ? 'bg-[#151210] border-[#2E2822]' : 'bg-[#FAF7F2] border-[#E8E1D5]'
                       }`}
                     >
                       <div className="flex items-center justify-between mb-1.5">
-                        <span className={`text-xs font-semibold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>
+                        <span className={`text-xs font-semibold ${darkMode ? 'text-stone-200' : 'text-stone-800'}`}>
                           {skill.name}
                         </span>
                         <span className={`text-[10px] font-mono font-medium px-2 py-0.5 rounded ${
                           skill.level === 'Expert'
-                            ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
-                            : skill.level === 'Advanced'
-                              ? 'bg-blue-500/10 text-blue-400 border border-blue-500/20'
-                              : 'bg-slate-700/40 text-slate-300'
+                            ? 'bg-amber-100 dark:bg-amber-950/60 text-amber-900 dark:text-amber-300 border border-amber-200 dark:border-amber-800/40'
+                            : 'bg-[#EAE4D8] dark:bg-[#25201B] text-stone-800 dark:text-stone-300 border border-[#D9D0C1] dark:border-[#3B332A]'
                         }`}>
                           {skill.level}
                         </span>
@@ -143,8 +141,8 @@ export default function SkillsSection({ darkMode, onSelectSkillFilter }) {
                             }}
                             className={`text-[10px] font-mono px-2 py-0.5 rounded transition-colors ${
                               darkMode 
-                                ? 'bg-slate-800/80 text-slate-400 hover:text-white hover:bg-slate-700' 
-                                : 'bg-white text-slate-600 border border-slate-200 hover:text-slate-900 hover:bg-slate-100'
+                                ? 'bg-[#201C18] text-stone-300 hover:text-white hover:bg-[#2C2620] border border-[#332C24]' 
+                                : 'bg-white text-stone-700 border border-[#E0D8CB] hover:border-amber-600 hover:text-amber-900'
                             }`}
                             title={`Search projects using ${tag}`}
                           >

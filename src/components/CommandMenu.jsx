@@ -36,9 +36,6 @@ export default function CommandMenu({
       if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
         e.preventDefault();
         if (isOpen) onClose();
-        else {
-          // Trigger open handled by parent
-        }
       }
       if (e.key === 'Escape' && isOpen) {
         onClose();
@@ -156,32 +153,32 @@ export default function CommandMenu({
       {/* Backdrop */}
       <div 
         onClick={onClose} 
-        className="fixed inset-0 bg-slate-950/80 backdrop-blur-md" 
+        className="fixed inset-0 bg-[#141210]/75 backdrop-blur-md" 
       />
 
       {/* Palette Modal */}
       <div 
         className={`relative w-full max-w-2xl rounded-2xl border shadow-2xl overflow-hidden z-10 transition-all ${
           darkMode 
-            ? 'bg-slate-900 border-slate-700 text-slate-100 shadow-black/80' 
-            : 'bg-white border-slate-200 text-slate-900 shadow-slate-300/50'
+            ? 'bg-[#1A1714] border-[#383129] text-[#EDE8E1]' 
+            : 'bg-white border-[#E7E2DA] text-stone-900 shadow-xl'
         }`}
       >
         
         {/* Input Bar */}
-        <div className="flex items-center px-4 py-3.5 border-b border-slate-800">
-          <Search className="w-5 h-5 text-indigo-400 mr-3 shrink-0" />
+        <div className="flex items-center px-4 py-3.5 border-b border-[#E7E2DA] dark:border-[#2E2822]">
+          <Search className="w-5 h-5 text-amber-700 dark:text-amber-400 mr-3 shrink-0" />
           <input
             ref={inputRef}
             type="text"
             placeholder="Type to search projects, tech stack, roles, awards..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="w-full bg-transparent text-sm sm:text-base outline-none placeholder-slate-500"
+            className="w-full bg-transparent text-sm sm:text-base outline-none placeholder-stone-400"
           />
           <button 
             onClick={onClose}
-            className="p-1 rounded-lg text-slate-400 hover:text-white"
+            className="p-1 rounded-lg text-stone-400 hover:text-stone-700 dark:hover:text-stone-200"
           >
             <X className="w-4 h-4" />
           </button>
@@ -190,12 +187,12 @@ export default function CommandMenu({
         {/* Results List */}
         <div className="max-h-[360px] overflow-y-auto p-2">
           {query.trim().length === 0 ? (
-            <div className="py-12 text-center text-xs text-slate-500">
-              <Command className="w-8 h-8 mx-auto mb-2 text-slate-600" />
+            <div className="py-12 text-center text-xs text-stone-500">
+              <Command className="w-8 h-8 mx-auto mb-2 text-stone-400" />
               <p>Type keywords like "Cassandra", "KYC", "PubSub", "Flipkart", "500k"</p>
             </div>
           ) : results.length === 0 ? (
-            <div className="py-10 text-center text-xs text-slate-500">
+            <div className="py-10 text-center text-xs text-stone-500">
               No results found matching "{query}"
             </div>
           ) : (
@@ -208,28 +205,28 @@ export default function CommandMenu({
                     onClick={item.action}
                     className={`p-3 rounded-xl flex items-center justify-between cursor-pointer transition-colors ${
                       darkMode 
-                        ? 'hover:bg-slate-800/80' 
-                        : 'hover:bg-slate-100'
+                        ? 'hover:bg-[#25201B]' 
+                        : 'hover:bg-[#F7F3EB]'
                     }`}
                   >
                     <div className="flex items-center gap-3 overflow-hidden">
                       <div className={`p-2 rounded-lg shrink-0 ${
-                        darkMode ? 'bg-slate-800 text-indigo-400' : 'bg-slate-100 text-indigo-600'
+                        darkMode ? 'bg-[#25201B] text-amber-400' : 'bg-[#F2ECE1] text-amber-800'
                       }`}>
                         <Icon className="w-4 h-4" />
                       </div>
                       <div className="overflow-hidden">
                         <div className="flex items-center gap-2">
                           <h4 className="text-sm font-semibold truncate">{item.title}</h4>
-                          <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-slate-800 text-slate-400 shrink-0">
+                          <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-[#EAE4D8] dark:bg-[#25201B] text-stone-700 dark:text-stone-400 shrink-0">
                             {item.type}
                           </span>
                         </div>
-                        <p className="text-xs text-slate-400 truncate mt-0.5">{item.subtitle}</p>
+                        <p className="text-xs text-stone-500 truncate mt-0.5">{item.subtitle}</p>
                       </div>
                     </div>
 
-                    <ArrowRight className="w-4 h-4 text-slate-500 shrink-0 ml-2" />
+                    <ArrowRight className="w-4 h-4 text-stone-400 shrink-0 ml-2" />
                   </div>
                 );
               })}
@@ -239,7 +236,7 @@ export default function CommandMenu({
 
         {/* Footer info */}
         <div className={`px-4 py-2 text-[11px] font-mono border-t flex items-center justify-between ${
-          darkMode ? 'bg-slate-950/50 border-slate-800 text-slate-500' : 'bg-slate-50 border-slate-200 text-slate-400'
+          darkMode ? 'bg-[#141210] border-[#2E2822] text-stone-500' : 'bg-[#FAF7F2] border-[#E7E2DA] text-stone-500'
         }`}>
           <span>Quick Navigator</span>
           <span>Esc to close</span>
